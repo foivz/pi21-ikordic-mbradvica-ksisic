@@ -26,8 +26,8 @@ F05 | Kreiranje računa | Izdavanje računa za određenu uslugu | Klara Šišić
 F06 | Financijski izvještaji | Sustav izvještaja o financijskim aktivnostima za određeno razdoblje | Klara Šišić
 
 ## Tehnologije i oprema
-Microsoft Visual Studio 2019
-C# (.NET Framework)
-Microsoft SQL Server
-GitHub
+Microsoft Visual Studio 2019,
+C# (.NET Framework),
+Microsoft SQL Server,
+GitHub,
 Microsoft Word
