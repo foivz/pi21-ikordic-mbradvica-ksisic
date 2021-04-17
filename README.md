@@ -11,19 +11,22 @@ Klara Šišić     | ksisic@foi.hr       | 0016139131| ksisic
 
 
 ## Opis domene
-Aplikacija BarberShop je programska potpora za frizerske salone. Kao primarnu funkciju frizerskih salona možemo istaknuti šišanje, brijanje i uređivanje brade te popratne aktivnosti. Korisnici ove aplikacije bili bi vlasnici frizerskih salona koji bi mogli vidjeti sve zakazane termine i aktivnosti koje ti termini uključuju. 
-Glavni cilj ove aplikacije je olakšani popis termina, pregled termina te olakšano praćenje rada zaposlenika i aktivnosti salona. Također možemo istaknuti i funkcionalnosti kao što su uvid u financijsko stanje i izrada financijskih obračuna. 
+Aplikacija FunctionBar je programska potpora za kafiće. Kao primarnu funkciju kafića možemo istaknuti posluživanje ljudi, izdavanje računa te upravljanje količinom robe. Korisnici ove aplikacije bili bi vlasnici kafića te njihovi zaposlenici koji bi mogli upravljati artiklima, izdati račun te vidjeti izdane računa i naručiti robu tj izraditi narudžbenicu. Također možemo istaknuti i funkcionalnosti kao što su uvid u financijsko stanje i izrada financijskih obračuna. 
+Glavni cilj ove aplikacije je olakšati rad kafićima, tako da su korisncima aplikacije sve nabrojane funcionalnosti na jednom mjestu. 
 Aplikacija bi podržavala dvije uloge tj. administracija i zaposlenici.
 
 ## Specifikacija projekta
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01    |Prijava| Prijava u sustav s dvije različite uloge| Mirela Bradvica
-F02 | Administracija zaposlenika | Unos zaposlenika, praćenje zaposlenika te ažuriranje i brisanje istih | Mirela Bradvica
-F03 | Upravljanje uslugama | Upravljanje uslugama frizerskog salona (proizvodima i kupcima) | Iva Kordić
-F04 | Upravljanje rezervacijama | Upravljanje rezervacijama uluga kako bi radni raspored bio jasno definiran | Iva Kordić
-F05 | Kreiranje računa | Izdavanje računa za određenu uslugu | Klara Šišić
-F06 | Financijski izvještaji | Sustav izvještaja o financijskim aktivnostima za određeno razdoblje | Klara Šišić
+F01    |Registracija i prijava | Registracija i prijava u sustav s dvije različite uloge,administrator i obican korisnik. Administrator ima veću razinu ovlasti te može obavljati funkcionalnosti poput upravljanja artiklima, zaposlenicima, storniranja računa itd.| Mirela Bradvica
+F02 | Upravljanje artiklima | Upravljanje artiklima služi za CRUD operacije nad artiklima kojima kafić raspolaže | Mirela Bradvica
+F03 | Upravljanje zaposlenicima | Upravljanje zaposlenicima služi za kreiranje i održavanje korisničkih računa s kojima se moguće prijaviti u sustav, kao i promjena postojećih uloga | Mirela Bradvica
+F04 | Izdavanje i kreiranje računa | Izdavanje i kreiranje računa služi za kreiranje,izdavanje i potencijalno storniranje računa | Iva Kordić
+F05 | Upravljanje rezervacijama| Mogućnost da se obavi rezervacija stola, što se evidentira u sustavu | Iva Kordić
+F06 | Naručivanje robe | Funkcionalnost služi za naručivanje robe, odnosno za kreiranje narudžbenica | Iva Kordić
+F07 | Zaprimanje robe | Funkcionalnost služi za evidentrianje zaprimljene robe | Klara Šišić
+F08 | Inventura | Funkcionalnost za proveđenje inventure | Klara Šišić
+F09 | Statistika | Služi za generiranje raznih izvještaja o poslovanju kafića u nekom vremenskom periodu | Klara Šišić
 
 ## Tehnologije i oprema
 Microsoft Visual Studio 2019,
