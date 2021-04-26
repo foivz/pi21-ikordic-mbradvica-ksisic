@@ -1,4 +1,4 @@
-# BarberShop
+# FunctionBar
 
 
 ## Projektni tim
