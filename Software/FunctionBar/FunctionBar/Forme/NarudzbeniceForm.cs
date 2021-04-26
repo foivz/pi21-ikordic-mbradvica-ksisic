@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FunctionBar
+namespace FunctionBar.Forme
 {
-    public partial class GlavnaForma : Form
+    public partial class NarudzbeniceForm : Form
     {
-        public GlavnaForma()
+        public NarudzbeniceForm()
         {
             InitializeComponent();
         }
