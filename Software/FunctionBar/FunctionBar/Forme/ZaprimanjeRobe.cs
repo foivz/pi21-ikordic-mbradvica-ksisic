@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FunctionBar.Forme
 {
-    public partial class NarudzbeniceForm : Form
+    public partial class ZaprimanjeRobe : Form
     {
-        public NarudzbeniceForm()
+        public ZaprimanjeRobe()
         {
             InitializeComponent();
         }

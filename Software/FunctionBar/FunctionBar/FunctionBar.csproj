@@ -46,16 +46,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forme\ArtikliForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ArtikliForm.Designer.cs">
+      <DependentUpon>ArtikliForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\GlavnaForma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\GlavnaForma.Designer.cs">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\InventuraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\InventuraForm.Designer.cs">
+      <DependentUpon>InventuraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\NarucivanjeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\NarucivanjeForm.Designer.cs">
+      <DependentUpon>NarucivanjeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaprimanjeRobe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaprimanjeRobe.Designer.cs">
+      <DependentUpon>ZaprimanjeRobe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\RačuniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\RačuniForm.Designer.cs">
+      <DependentUpon>RačuniForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\RezervacijeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\RezervacijeForm.Designer.cs">
+      <DependentUpon>RezervacijeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaposleniciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniciForm.Designer.cs">
+      <DependentUpon>ZaposleniciForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forme\ArtikliForm.resx">
+      <DependentUpon>ArtikliForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\InventuraForm.resx">
+      <DependentUpon>InventuraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\NarucivanjeForm.resx">
+      <DependentUpon>NarucivanjeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaprimanjeRobe.resx">
+      <DependentUpon>ZaprimanjeRobe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\RačuniForm.resx">
+      <DependentUpon>RačuniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\RezervacijeForm.resx">
+      <DependentUpon>RezervacijeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniciForm.resx">
+      <DependentUpon>ZaposleniciForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\profilna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\profilna.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

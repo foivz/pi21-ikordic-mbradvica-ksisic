@@ -1,6 +1,6 @@
 ﻿namespace FunctionBar.Forme
 {
-    partial class NarudzbeniceForm
+    partial class ZaprimanjeRobe
     {
         /// <summary>
         /// Required designer variable.

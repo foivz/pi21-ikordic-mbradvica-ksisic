@@ -92,6 +92,7 @@
             this.uxStatistika.TabIndex = 6;
             this.uxStatistika.Text = "Statistika";
             this.uxStatistika.UseVisualStyleBackColor = true;
+            this.uxStatistika.Click += new System.EventHandler(this.uxStatistika_Click);
             // 
             // uxArtikl
             // 
@@ -103,6 +104,7 @@
             this.uxArtikl.TabIndex = 7;
             this.uxArtikl.Text = "Artikli";
             this.uxArtikl.UseVisualStyleBackColor = true;
+            this.uxArtikl.Click += new System.EventHandler(this.uxArtikl_Click);
             // 
             // uxRezervacije
             // 
@@ -114,6 +116,7 @@
             this.uxRezervacije.TabIndex = 2;
             this.uxRezervacije.Text = "Rezervacije";
             this.uxRezervacije.UseVisualStyleBackColor = true;
+            this.uxRezervacije.Click += new System.EventHandler(this.uxRezervacije_Click);
             // 
             // uxZaposlenici
             // 
@@ -125,6 +128,7 @@
             this.uxZaposlenici.TabIndex = 3;
             this.uxZaposlenici.Text = "Zaposlenici";
             this.uxZaposlenici.UseVisualStyleBackColor = true;
+            this.uxZaposlenici.Click += new System.EventHandler(this.uxZaposlenici_Click);
             // 
             // uxZaprimanjeRobe
             // 
@@ -148,6 +152,7 @@
             this.uxNarucivanje.TabIndex = 9;
             this.uxNarucivanje.Text = "Naručivanje robe";
             this.uxNarucivanje.UseVisualStyleBackColor = true;
+            this.uxNarucivanje.Click += new System.EventHandler(this.uxNarucivanje_Click);
             // 
             // uxRacuni
             // 
@@ -159,6 +164,7 @@
             this.uxRacuni.TabIndex = 8;
             this.uxRacuni.Text = "Računi";
             this.uxRacuni.UseVisualStyleBackColor = true;
+            this.uxRacuni.Click += new System.EventHandler(this.uxRacuni_Click);
             // 
             // uxInventura
             // 
@@ -170,6 +176,7 @@
             this.uxInventura.TabIndex = 4;
             this.uxInventura.Text = "Inventura";
             this.uxInventura.UseVisualStyleBackColor = true;
+            this.uxInventura.Click += new System.EventHandler(this.uxInventura_Click);
             // 
             // GlavnaForma
             // 
