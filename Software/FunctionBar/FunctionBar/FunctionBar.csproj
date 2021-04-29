@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Artikl.cs" />
+    <Compile Include="Dobavljac.cs" />
     <Compile Include="Forme\ArtikliForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +96,20 @@
     <Compile Include="Forme\ZaposleniciForm.Designer.cs">
       <DependentUpon>ZaposleniciForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gost.cs" />
+    <Compile Include="Narudzbenica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Racun.cs" />
+    <Compile Include="Rezervacija.cs" />
+    <Compile Include="StavkaNarudzbe.cs" />
+    <Compile Include="StavkaRacuna.cs" />
+    <Compile Include="Stol.cs" />
+    <Compile Include="StopaPoreza.cs" />
+    <Compile Include="VrstaArtikla.cs" />
+    <Compile Include="VrstaStola.cs" />
+    <Compile Include="VrstaUloge.cs" />
+    <Compile Include="Zaposlenik.cs" />
     <EmbeddedResource Include="Forme\ArtikliForm.resx">
       <DependentUpon>ArtikliForm.cs</DependentUpon>
     </EmbeddedResource>

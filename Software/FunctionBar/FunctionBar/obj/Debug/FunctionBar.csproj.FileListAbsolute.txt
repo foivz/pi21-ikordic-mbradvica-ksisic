@@ -18,7 +18,6 @@ A:\mbradvica-ksisic-ikordic\mirela\pi21-ikordic-mbradvica-ksisic\Software\Functi
 A:\mbradvica-ksisic-ikordic\iva\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBar.exe.config
 A:\mbradvica-ksisic-ikordic\iva\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBar.exe
 A:\mbradvica-ksisic-ikordic\iva\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBar.pdb
-A:\mbradvica-ksisic-ikordic\iva\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.csprojAssemblyReference.cache
 A:\mbradvica-ksisic-ikordic\iva\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.Forme.ArtikliForm.resources
 A:\mbradvica-ksisic-ikordic\iva\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.GlavnaForma.resources
 A:\mbradvica-ksisic-ikordic\iva\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.Forme.InventuraForm.resources
