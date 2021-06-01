@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FBarDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="artikl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cijena" Type="Double" />
+    <Property Name="normativ" Type="Double" />
+    <Property Name="kolicina_na_zalihi" Type="Double" />
+    <Property Name="nabavna_cijena" Type="Double" />
+    <Property Name="id_vrsta_artikla" Type="Int32" Nullable="false" />
+    <Property Name="id_stopa_poreza" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="stopa_poreza" Relationship="Self.FK_artikl_stopa_poreza" FromRole="artikl" ToRole="stopa_poreza" />
+    <NavigationProperty Name="vrsta_artikla" Relationship="Self.FK_artikl_vrsta_artikla" FromRole="artikl" ToRole="vrsta_artikla" />
+    <NavigationProperty Name="stavka_narudzbe" Relationship="Self.FK_stavka_narudzbe_artikl" FromRole="artikl" ToRole="stavka_narudzbe" />
+    <NavigationProperty Name="stavka_racuna" Relationship="Self.FK_stavka_racuna_artikl" FromRole="artikl" ToRole="stavka_racuna" />
+  </EntityType>
+  <EntityType Name="dobavljac">
+    <Key>
+      <PropertyRef Name="OIB" />
+    </Key>
+    <Property Name="OIB" Type="Int32" Nullable="false" />
+    <Property Name="naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="adresa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IBAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="narudzbenicas" Relationship="Self.FK_narudzbenica_dobavljac" FromRole="dobavljac" ToRole="narudzbenica" />
+  </EntityType>
+  <EntityType Name="gost">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="prezime" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="kontakt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="rezervacijas" Relationship="Self.FK_rezervacija_gost" FromRole="gost" ToRole="rezervacija" />
+  </EntityType>
+  <EntityType Name="narudzbenica">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="datum_narudzbe" Type="DateTime" Precision="0" />
+    <Property Name="datum_zaprimanja" Type="DateTime" Precision="0" />
+    <Property Name="id_dobavljac" Type="Int32" Nullable="false" />
+    <Property Name="id_zaposlenik" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="dobavljac" Relationship="Self.FK_narudzbenica_dobavljac" FromRole="narudzbenica" ToRole="dobavljac" />
+    <NavigationProperty Name="zaposlenik" Relationship="Self.FK_narudzbenica_zaposlenik" FromRole="narudzbenica" ToRole="zaposlenik" />
+    <NavigationProperty Name="stavka_narudzbe" Relationship="Self.FK_stavka_narudzbe_narudzbenica" FromRole="narudzbenica" ToRole="stavka_narudzbe" />
+  </EntityType>
+  <EntityType Name="racun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_zaposlenik" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="zaposlenik" Relationship="Self.FK_racun_zaposlenik" FromRole="racun" ToRole="zaposlenik" />
+    <NavigationProperty Name="stavka_racuna" Relationship="Self.FK_stavka_racuna_racun" FromRole="racun" ToRole="stavka_racuna" />
+  </EntityType>
+  <EntityType Name="rezervacija">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="datum_zaprimanja" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="datum_rezervacije" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_zaposlenik" Type="Int64" Nullable="false" />
+    <Property Name="id_gost" Type="Int32" Nullable="false" />
+    <Property Name="id_stol" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="gost" Relationship="Self.FK_rezervacija_gost" FromRole="rezervacija" ToRole="gost" />
+    <NavigationProperty Name="stol" Relationship="Self.FK_rezervacija_stol" FromRole="rezervacija" ToRole="stol" />
+    <NavigationProperty Name="zaposlenik" Relationship="Self.FK_rezervacija_zaposlenik" FromRole="rezervacija" ToRole="zaposlenik" />
+  </EntityType>
+  <EntityType Name="stavka_narudzbe">
+    <Key>
+      <PropertyRef Name="id_artikl" />
+      <PropertyRef Name="id_narudzbenica" />
+    </Key>
+    <Property Name="id_artikl" Type="Int32" Nullable="false" />
+    <Property Name="id_narudzbenica" Type="Int32" Nullable="false" />
+    <Property Name="kolicina" Type="Int32" />
+    <NavigationProperty Name="artikl" Relationship="Self.FK_stavka_narudzbe_artikl" FromRole="stavka_narudzbe" ToRole="artikl" />
+    <NavigationProperty Name="narudzbenica" Relationship="Self.FK_stavka_narudzbe_narudzbenica" FromRole="stavka_narudzbe" ToRole="narudzbenica" />
+  </EntityType>
+  <EntityType Name="stavka_racuna">
+    <Key>
+      <PropertyRef Name="id_racun" />
+      <PropertyRef Name="id_artikl" />
+    </Key>
+    <Property Name="id_racun" Type="Int32" Nullable="false" />
+    <Property Name="id_artikl" Type="Int32" Nullable="false" />
+    <Property Name="kolicina" Type="Int32" />
+    <NavigationProperty Name="artikl" Relationship="Self.FK_stavka_racuna_artikl" FromRole="stavka_racuna" ToRole="artikl" />
+    <NavigationProperty Name="racun" Relationship="Self.FK_stavka_racuna_racun" FromRole="stavka_racuna" ToRole="racun" />
+  </EntityType>
+  <EntityType Name="stol">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="broj_mjesta" Type="Int32" />
+    <Property Name="id_rezervacije" Type="Int32" Nullable="false" />
+    <Property Name="id_vrsta_stola" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="rezervacijas" Relationship="Self.FK_rezervacija_stol" FromRole="stol" ToRole="rezervacija" />
+    <NavigationProperty Name="vrsta_stola" Relationship="Self.FK_stol_vrsta_stola" FromRole="stol" ToRole="vrsta_stola" />
+  </EntityType>
+  <EntityType Name="stopa_poreza">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="artikls" Relationship="Self.FK_artikl_stopa_poreza" FromRole="stopa_poreza" ToRole="artikl" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vrsta_artikla">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="artikls" Relationship="Self.FK_artikl_vrsta_artikla" FromRole="vrsta_artikla" ToRole="artikl" />
+    <Property Name="putanja" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vrsta_stola">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="stols" Relationship="Self.FK_stol_vrsta_stola" FromRole="vrsta_stola" ToRole="stol" />
+  </EntityType>
+  <EntityType Name="vrsta_uloge">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="zaposleniks" Relationship="Self.FK_zaposlenik_vrsta_uloge" FromRole="vrsta_uloge" ToRole="zaposlenik" />
+  </EntityType>
+  <EntityType Name="zaposlenik">
+    <Key>
+      <PropertyRef Name="OIB" />
+    </Key>
+    <Property Name="OIB" Type="Int64" Nullable="false" />
+    <Property Name="ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prezime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_rodenja" Type="DateTime" Precision="0" />
+    <Property Name="adresa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="strucna_sprema" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="slika_putanja" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_vrsta_uloge" Type="Int32" Nullable="false" />
+    <Property Name="korisnicko_ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lozinka" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="narudzbenicas" Relationship="Self.FK_narudzbenica_zaposlenik" FromRole="zaposlenik" ToRole="narudzbenica" />
+    <NavigationProperty Name="racuns" Relationship="Self.FK_racun_zaposlenik" FromRole="zaposlenik" ToRole="racun" />
+    <NavigationProperty Name="rezervacijas" Relationship="Self.FK_rezervacija_zaposlenik" FromRole="zaposlenik" ToRole="rezervacija" />
+    <NavigationProperty Name="vrsta_uloge" Relationship="Self.FK_zaposlenik_vrsta_uloge" FromRole="zaposlenik" ToRole="vrsta_uloge" />
+  </EntityType>
+  <Association Name="FK_artikl_stopa_poreza">
+    <End Role="stopa_poreza" Type="Self.stopa_poreza" Multiplicity="1" />
+    <End Role="artikl" Type="Self.artikl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="stopa_poreza">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artikl">
+        <PropertyRef Name="id_stopa_poreza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_artikl_vrsta_artikla">
+    <End Role="vrsta_artikla" Type="Self.vrsta_artikla" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="artikl" Type="Self.artikl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vrsta_artikla">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artikl">
+        <PropertyRef Name="id_vrsta_artikla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stavka_narudzbe_artikl">
+    <End Role="artikl" Type="Self.artikl" Multiplicity="1" />
+    <End Role="stavka_narudzbe" Type="Self.stavka_narudzbe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artikl">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="stavka_narudzbe">
+        <PropertyRef Name="id_artikl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stavka_racuna_artikl">
+    <End Role="artikl" Type="Self.artikl" Multiplicity="1" />
+    <End Role="stavka_racuna" Type="Self.stavka_racuna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artikl">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="stavka_racuna">
+        <PropertyRef Name="id_artikl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_narudzbenica_dobavljac">
+    <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="1" />
+    <End Role="narudzbenica" Type="Self.narudzbenica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dobavljac">
+        <PropertyRef Name="OIB" />
+      </Principal>
+      <Dependent Role="narudzbenica">
+        <PropertyRef Name="id_dobavljac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervacija_gost">
+    <End Role="gost" Type="Self.gost" Multiplicity="1" />
+    <End Role="rezervacija" Type="Self.rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gost">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="rezervacija">
+        <PropertyRef Name="id_gost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_narudzbenica_zaposlenik">
+    <End Role="zaposlenik" Type="Self.zaposlenik" Multiplicity="1" />
+    <End Role="narudzbenica" Type="Self.narudzbenica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenik">
+        <PropertyRef Name="OIB" />
+      </Principal>
+      <Dependent Role="narudzbenica">
+        <PropertyRef Name="id_zaposlenik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stavka_narudzbe_narudzbenica">
+    <End Role="narudzbenica" Type="Self.narudzbenica" Multiplicity="1" />
+    <End Role="stavka_narudzbe" Type="Self.stavka_narudzbe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="narudzbenica">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="stavka_narudzbe">
+        <PropertyRef Name="id_narudzbenica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_racun_zaposlenik">
+    <End Role="zaposlenik" Type="Self.zaposlenik" Multiplicity="1" />
+    <End Role="racun" Type="Self.racun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenik">
+        <PropertyRef Name="OIB" />
+      </Principal>
+      <Dependent Role="racun">
+        <PropertyRef Name="id_zaposlenik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stavka_racuna_racun">
+    <End Role="racun" Type="Self.racun" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="stavka_racuna" Type="Self.stavka_racuna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="racun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="stavka_racuna">
+        <PropertyRef Name="id_racun" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervacija_stol">
+    <End Role="stol" Type="Self.stol" Multiplicity="1" />
+    <End Role="rezervacija" Type="Self.rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="stol">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="rezervacija">
+        <PropertyRef Name="id_stol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervacija_zaposlenik">
+    <End Role="zaposlenik" Type="Self.zaposlenik" Multiplicity="1" />
+    <End Role="rezervacija" Type="Self.rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenik">
+        <PropertyRef Name="OIB" />
+      </Principal>
+      <Dependent Role="rezervacija">
+        <PropertyRef Name="id_zaposlenik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stol_vrsta_stola">
+    <End Role="vrsta_stola" Type="Self.vrsta_stola" Multiplicity="1" />
+    <End Role="stol" Type="Self.stol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vrsta_stola">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="stol">
+        <PropertyRef Name="id_vrsta_stola" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_zaposlenik_vrsta_uloge">
+    <End Role="vrsta_uloge" Type="Self.vrsta_uloge" Multiplicity="1" />
+    <End Role="zaposlenik" Type="Self.zaposlenik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vrsta_uloge">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="zaposlenik">
+        <PropertyRef Name="id_vrsta_uloge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FunctionBarDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="artikls" EntityType="Self.artikl" />
+    <EntitySet Name="dobavljacs" EntityType="Self.dobavljac" />
+    <EntitySet Name="gosts" EntityType="Self.gost" />
+    <EntitySet Name="narudzbenicas" EntityType="Self.narudzbenica" />
+    <EntitySet Name="racuns" EntityType="Self.racun" />
+    <EntitySet Name="rezervacijas" EntityType="Self.rezervacija" />
+    <EntitySet Name="stavka_narudzbe" EntityType="Self.stavka_narudzbe" />
+    <EntitySet Name="stavka_racuna" EntityType="Self.stavka_racuna" />
+    <EntitySet Name="stols" EntityType="Self.stol" />
+    <EntitySet Name="stopa_poreza" EntityType="Self.stopa_poreza" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="vrsta_artikla" EntityType="Self.vrsta_artikla" />
+    <EntitySet Name="vrsta_stola" EntityType="Self.vrsta_stola" />
+    <EntitySet Name="vrsta_uloge" EntityType="Self.vrsta_uloge" />
+    <EntitySet Name="zaposleniks" EntityType="Self.zaposlenik" />
+    <AssociationSet Name="FK_artikl_stopa_poreza" Association="Self.FK_artikl_stopa_poreza">
+      <End Role="stopa_poreza" EntitySet="stopa_poreza" />
+      <End Role="artikl" EntitySet="artikls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_artikl_vrsta_artikla" Association="Self.FK_artikl_vrsta_artikla">
+      <End Role="vrsta_artikla" EntitySet="vrsta_artikla" />
+      <End Role="artikl" EntitySet="artikls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stavka_narudzbe_artikl" Association="Self.FK_stavka_narudzbe_artikl">
+      <End Role="artikl" EntitySet="artikls" />
+      <End Role="stavka_narudzbe" EntitySet="stavka_narudzbe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stavka_racuna_artikl" Association="Self.FK_stavka_racuna_artikl">
+      <End Role="artikl" EntitySet="artikls" />
+      <End Role="stavka_racuna" EntitySet="stavka_racuna" />
+    </AssociationSet>
+    <AssociationSet Name="FK_narudzbenica_dobavljac" Association="Self.FK_narudzbenica_dobavljac">
+      <End Role="dobavljac" EntitySet="dobavljacs" />
+      <End Role="narudzbenica" EntitySet="narudzbenicas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervacija_gost" Association="Self.FK_rezervacija_gost">
+      <End Role="gost" EntitySet="gosts" />
+      <End Role="rezervacija" EntitySet="rezervacijas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_narudzbenica_zaposlenik" Association="Self.FK_narudzbenica_zaposlenik">
+      <End Role="zaposlenik" EntitySet="zaposleniks" />
+      <End Role="narudzbenica" EntitySet="narudzbenicas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stavka_narudzbe_narudzbenica" Association="Self.FK_stavka_narudzbe_narudzbenica">
+      <End Role="narudzbenica" EntitySet="narudzbenicas" />
+      <End Role="stavka_narudzbe" EntitySet="stavka_narudzbe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_racun_zaposlenik" Association="Self.FK_racun_zaposlenik">
+      <End Role="zaposlenik" EntitySet="zaposleniks" />
+      <End Role="racun" EntitySet="racuns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stavka_racuna_racun" Association="Self.FK_stavka_racuna_racun">
+      <End Role="racun" EntitySet="racuns" />
+      <End Role="stavka_racuna" EntitySet="stavka_racuna" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervacija_stol" Association="Self.FK_rezervacija_stol">
+      <End Role="stol" EntitySet="stols" />
+      <End Role="rezervacija" EntitySet="rezervacijas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervacija_zaposlenik" Association="Self.FK_rezervacija_zaposlenik">
+      <End Role="zaposlenik" EntitySet="zaposleniks" />
+      <End Role="rezervacija" EntitySet="rezervacijas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stol_vrsta_stola" Association="Self.FK_stol_vrsta_stola">
+      <End Role="vrsta_stola" EntitySet="vrsta_stola" />
+      <End Role="stol" EntitySet="stols" />
+    </AssociationSet>
+    <AssociationSet Name="FK_zaposlenik_vrsta_uloge" Association="Self.FK_zaposlenik_vrsta_uloge">
+      <End Role="vrsta_uloge" EntitySet="vrsta_uloge" />
+      <End Role="zaposlenik" EntitySet="zaposleniks" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FBarDB.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FBarDB.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
