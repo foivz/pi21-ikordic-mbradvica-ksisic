@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAzurirajArtikl = new System.Windows.Forms.Button();
+            this.btnUnesiArtikl = new System.Windows.Forms.Button();
+            this.btnIzbrisiArtikl = new System.Windows.Forms.Button();
             this._PI21_19_DBDataSet = new FunctionBar._PI21_19_DBDataSet();
             this.vrstaartiklaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vrsta_artiklaTableAdapter = new FunctionBar._PI21_19_DBDataSetTableAdapters.vrsta_artiklaTableAdapter();
@@ -41,17 +41,17 @@
             this._PI21_19_DBDataSet1 = new FunctionBar._PI21_19_DBDataSet1();
             this.vrstaartiklaBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.vrsta_artiklaTableAdapter1 = new FunctionBar._PI21_19_DBDataSet1TableAdapters.vrsta_artiklaTableAdapter();
-            this.vrstaartiklaBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.dgvVrstaArtikla = new System.Windows.Forms.DataGridView();
             this._PI21_19_DBDataSet2 = new FunctionBar._PI21_19_DBDataSet2();
             this.artiklBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artiklTableAdapter = new FunctionBar._PI21_19_DBDataSet2TableAdapters.artiklTableAdapter();
             this.dgvArtikl = new System.Windows.Forms.DataGridView();
-            this.artiklBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.nazivDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artiklBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slika = new System.Windows.Forms.DataGridViewImageColumn();
+            this.vrstaartiklaBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource1)).BeginInit();
@@ -59,46 +59,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVrstaArtikla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn
+            // btnAzurirajArtikl
             // 
-            this.btn.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.Location = new System.Drawing.Point(734, 291);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(115, 54);
-            this.btn.TabIndex = 2;
-            this.btn.Text = "Ažuriraj artikl";
-            this.btn.UseVisualStyleBackColor = false;
+            this.btnAzurirajArtikl.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnAzurirajArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAzurirajArtikl.Location = new System.Drawing.Point(705, 272);
+            this.btnAzurirajArtikl.Name = "btnAzurirajArtikl";
+            this.btnAzurirajArtikl.Size = new System.Drawing.Size(115, 54);
+            this.btnAzurirajArtikl.TabIndex = 2;
+            this.btnAzurirajArtikl.Text = "Ažuriraj artikl";
+            this.btnAzurirajArtikl.UseVisualStyleBackColor = false;
+            this.btnAzurirajArtikl.Click += new System.EventHandler(this.btnAzurirajArtikl_Click);
             // 
-            // button2
+            // btnUnesiArtikl
             // 
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(559, 291);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 54);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Unesi novi artikl";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUnesiArtikl.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnUnesiArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnesiArtikl.Location = new System.Drawing.Point(545, 272);
+            this.btnUnesiArtikl.Name = "btnUnesiArtikl";
+            this.btnUnesiArtikl.Size = new System.Drawing.Size(115, 54);
+            this.btnUnesiArtikl.TabIndex = 3;
+            this.btnUnesiArtikl.Text = "Unesi novi artikl";
+            this.btnUnesiArtikl.UseVisualStyleBackColor = false;
+            this.btnUnesiArtikl.Click += new System.EventHandler(this.btnUnesiArtikl_Click);
             // 
-            // button3
+            // btnIzbrisiArtikl
             // 
-            this.button3.BackColor = System.Drawing.Color.Salmon;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(909, 291);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 54);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Izbriši artikl";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnIzbrisiArtikl.BackColor = System.Drawing.Color.Salmon;
+            this.btnIzbrisiArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIzbrisiArtikl.Location = new System.Drawing.Point(849, 272);
+            this.btnIzbrisiArtikl.Name = "btnIzbrisiArtikl";
+            this.btnIzbrisiArtikl.Size = new System.Drawing.Size(115, 54);
+            this.btnIzbrisiArtikl.TabIndex = 4;
+            this.btnIzbrisiArtikl.Text = "Izbriši artikl";
+            this.btnIzbrisiArtikl.UseVisualStyleBackColor = false;
+            this.btnIzbrisiArtikl.Click += new System.EventHandler(this.btnIzbrisiArtikl_Click);
             // 
             // _PI21_19_DBDataSet
             // 
@@ -143,10 +146,6 @@
             // 
             this.vrsta_artiklaTableAdapter1.ClearBeforeFill = true;
             // 
-            // vrstaartiklaBindingSource5
-            // 
-            this.vrstaartiklaBindingSource5.DataSource = typeof(FunctionBarDb.vrsta_artikla);
-            // 
             // dgvVrstaArtikla
             // 
             this.dgvVrstaArtikla.AutoGenerateColumns = false;
@@ -183,14 +182,10 @@
             this.nazivDataGridViewTextBoxColumn1,
             this.cijenaDataGridViewTextBoxColumn});
             this.dgvArtikl.DataSource = this.artiklBindingSource1;
-            this.dgvArtikl.Location = new System.Drawing.Point(545, 23);
+            this.dgvArtikl.Location = new System.Drawing.Point(545, 12);
             this.dgvArtikl.Name = "dgvArtikl";
             this.dgvArtikl.Size = new System.Drawing.Size(321, 194);
             this.dgvArtikl.TabIndex = 6;
-            // 
-            // artiklBindingSource1
-            // 
-            this.artiklBindingSource1.DataSource = typeof(FunctionBarDb.artikl);
             // 
             // nazivDataGridViewTextBoxColumn1
             // 
@@ -203,6 +198,10 @@
             this.cijenaDataGridViewTextBoxColumn.DataPropertyName = "cijena";
             this.cijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
             this.cijenaDataGridViewTextBoxColumn.Name = "cijenaDataGridViewTextBoxColumn";
+            // 
+            // artiklBindingSource1
+            // 
+            this.artiklBindingSource1.DataSource = typeof(FunctionBarDb.artikl);
             // 
             // nazivDataGridViewTextBoxColumn
             // 
@@ -219,6 +218,10 @@
             this.slika.ReadOnly = true;
             this.slika.Width = 220;
             // 
+            // vrstaartiklaBindingSource5
+            // 
+            this.vrstaartiklaBindingSource5.DataSource = typeof(FunctionBarDb.vrsta_artikla);
+            // 
             // ArtikliForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,9 +230,9 @@
             this.ClientSize = new System.Drawing.Size(1029, 757);
             this.Controls.Add(this.dgvArtikl);
             this.Controls.Add(this.dgvVrstaArtikla);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn);
+            this.Controls.Add(this.btnIzbrisiArtikl);
+            this.Controls.Add(this.btnUnesiArtikl);
+            this.Controls.Add(this.btnAzurirajArtikl);
             this.Name = "ArtikliForm";
             this.Text = "ArtikliForm";
             this.Load += new System.EventHandler(this.ArtikliForm_Load);
@@ -240,20 +243,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVrstaArtikla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAzurirajArtikl;
+        private System.Windows.Forms.Button btnUnesiArtikl;
+        private System.Windows.Forms.Button btnIzbrisiArtikl;
         private _PI21_19_DBDataSet _PI21_19_DBDataSet;
         private System.Windows.Forms.BindingSource vrstaartiklaBindingSource;
         private _PI21_19_DBDataSetTableAdapters.vrsta_artiklaTableAdapter vrsta_artiklaTableAdapter;

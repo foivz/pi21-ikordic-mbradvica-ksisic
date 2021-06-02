@@ -144,7 +144,9 @@
     <Property Name="lozinka" Type="text" Nullable="false" />
   </EntityType>
   <Association Name="FK_artikl_stopa_poreza">
-    <End Role="stopa_poreza" Type="Self.stopa_poreza" Multiplicity="1" />
+    <End Role="stopa_poreza" Type="Self.stopa_poreza" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="artikl" Type="Self.artikl" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="stopa_poreza">

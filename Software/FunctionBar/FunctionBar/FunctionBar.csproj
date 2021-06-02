@@ -59,6 +59,12 @@
     <Compile Include="Forme\ArtikliForm.Designer.cs">
       <DependentUpon>ArtikliForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\AzurirajArtikLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AzurirajArtikLForm.Designer.cs">
+      <DependentUpon>AzurirajArtikLForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\GlavnaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     </Compile>
     <Compile Include="Forme\NarucivanjeForm.Designer.cs">
       <DependentUpon>NarucivanjeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\NoviArtiklForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\NoviArtiklForm.Designer.cs">
+      <DependentUpon>NoviArtiklForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\ZaprimanjeRobe.cs">
       <SubType>Form</SubType>
@@ -121,6 +133,9 @@
     <EmbeddedResource Include="Forme\ArtikliForm.resx">
       <DependentUpon>ArtikliForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AzurirajArtikLForm.resx">
+      <DependentUpon>AzurirajArtikLForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\NarucivanjeForm.resx">
       <DependentUpon>NarucivanjeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\NoviArtiklForm.resx">
+      <DependentUpon>NoviArtiklForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\ZaprimanjeRobe.resx">
       <DependentUpon>ZaprimanjeRobe.cs</DependentUpon>

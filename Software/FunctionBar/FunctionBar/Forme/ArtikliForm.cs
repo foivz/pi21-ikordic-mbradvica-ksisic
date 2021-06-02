@@ -53,5 +53,43 @@ namespace FunctionBar.Forme
             vrsta_artikla odabranaVrsta = dgvVrstaArtikla.CurrentRow.DataBoundItem as vrsta_artikla;
             dgvArtikl.DataSource = UzmiArtikle(odabranaVrsta);
         }
+
+        private void btnUnesiArtikl_Click(object sender, EventArgs e)
+        {
+            NoviArtiklForm forma = new NoviArtiklForm();
+            forma.ShowDialog();
+            Osvjezi();
+        }
+
+        private void btnIzbrisiArtikl_Click(object sender, EventArgs e)
+        {
+            IzbrisiArtikl();
+        }
+
+        private void IzbrisiArtikl()
+        {
+            artikl artikl = dgvArtikl.CurrentRow.DataBoundItem as artikl;
+            using(var context= new FunctionBarDB())
+            {
+                context.artikls.Attach(artikl);
+                context.artikls.Remove(artikl);
+                context.SaveChanges();
+            }
+            Osvjezi();
+        }
+
+        private void btnAzurirajArtikl_Click(object sender, EventArgs e)
+        {
+            OtvoriAžurirajArtikl();
+        }
+
+        private void OtvoriAžurirajArtikl()
+        {
+            artikl artikl = dgvArtikl.CurrentRow.DataBoundItem as artikl;
+            AzurirajArtikLForm forma = new AzurirajArtikLForm(artikl);
+            forma.ShowDialog();
+            Osvjezi();
+            
+        }
     }
 }
