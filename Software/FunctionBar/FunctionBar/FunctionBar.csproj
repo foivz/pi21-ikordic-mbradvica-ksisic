@@ -65,6 +65,12 @@
     <Compile Include="Forme\AzurirajArtikLForm.Designer.cs">
       <DependentUpon>AzurirajArtikLForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\AzurirajZaposlenikaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AzurirajZaposlenikaForm.Designer.cs">
+      <DependentUpon>AzurirajZaposlenikaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\GlavnaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     <Compile Include="Forme\NoviArtiklForm.Designer.cs">
       <DependentUpon>NoviArtiklForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\ZaposleniciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaposleniciForm.Designer.cs">
+      <DependentUpon>ZaposleniciForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\ZaprimanjeRobe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,14 +119,14 @@
     <Compile Include="Forme\RezervacijeForm.Designer.cs">
       <DependentUpon>RezervacijeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\ZaposleniciForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forme\ZaposleniciForm.Designer.cs">
-      <DependentUpon>ZaposleniciForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnesiZaposlenikaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnesiZaposlenikaForm.Designer.cs">
+      <DependentUpon>UnesiZaposlenikaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="_PI21_19_DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,11 +142,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_PI21_19_DBDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_PI21_19_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_PI21_19_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_PI21_19_DBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_PI21_19_DBDataSet4.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forme\ArtikliForm.resx">
       <DependentUpon>ArtikliForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\AzurirajArtikLForm.resx">
       <DependentUpon>AzurirajArtikLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AzurirajZaposlenikaForm.resx">
+      <DependentUpon>AzurirajZaposlenikaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
@@ -148,6 +173,9 @@
     <EmbeddedResource Include="Forme\NoviArtiklForm.resx">
       <DependentUpon>NoviArtiklForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaposleniciForm.resx">
+      <DependentUpon>ZaposleniciForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\ZaprimanjeRobe.resx">
       <DependentUpon>ZaprimanjeRobe.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,9 +184,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\RezervacijeForm.resx">
       <DependentUpon>RezervacijeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forme\ZaposleniciForm.resx">
-      <DependentUpon>ZaposleniciForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -170,9 +195,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UnesiZaposlenikaForm.resx">
+      <DependentUpon>UnesiZaposlenikaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FunctionBar._PI21_19_DBDataSet3TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\FunctionBar._PI21_19_DBDataSet3TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\FunctionBar._PI21_19_DBDataSet3TableAdapters.zaposlenikTableAdapter.datasource" />
+    <None Include="Properties\DataSources\FunctionBar._PI21_19_DBDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\FunctionBar._PI21_19_DBDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\FunctionBar._PI21_19_DBDataSetTableAdapters.vrsta_artiklaTableAdapter.datasource" />
     <None Include="Properties\DataSources\FunctionBarDb.artikl.datasource" />
     <None Include="Properties\DataSources\FunctionBarDb.vrsta_artikla.datasource" />
+    <None Include="Properties\DataSources\FunctionBarDb.zaposlenik.datasource" />
+    <None Include="Properties\DataSources\_PI21_19_DBDataSet.datasource" />
+    <None Include="Properties\DataSources\_PI21_19_DBDataSet.vrsta_artiklaDataTable.datasource" />
+    <None Include="Properties\DataSources\_PI21_19_DBDataSet.vrsta_artiklaRow.datasource" />
+    <None Include="Properties\DataSources\_PI21_19_DBDataSet.vrsta_artiklaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\_PI21_19_DBDataSet.vrsta_artiklaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\_PI21_19_DBDataSet2.artiklDataTable.datasource" />
+    <None Include="Properties\DataSources\_PI21_19_DBDataSet3.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -214,6 +256,28 @@
     </None>
     <None Include="_PI21_19_DBDataSet2.xss">
       <DependentUpon>_PI21_19_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_PI21_19_DBDataSet3.xsc">
+      <DependentUpon>_PI21_19_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_PI21_19_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_PI21_19_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_PI21_19_DBDataSet3.xss">
+      <DependentUpon>_PI21_19_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_PI21_19_DBDataSet4.xsc">
+      <DependentUpon>_PI21_19_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_PI21_19_DBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_PI21_19_DBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_PI21_19_DBDataSet4.xss">
+      <DependentUpon>_PI21_19_DBDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

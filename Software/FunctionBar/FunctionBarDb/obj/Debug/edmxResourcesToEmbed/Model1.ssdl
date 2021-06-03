@@ -142,6 +142,7 @@
     <Property Name="id_vrsta_uloge" Type="int" Nullable="false" />
     <Property Name="korisnicko_ime" Type="text" Nullable="false" />
     <Property Name="lozinka" Type="text" Nullable="false" />
+    <Property Name="putanja" Type="text" />
   </EntityType>
   <Association Name="FK_artikl_stopa_poreza">
     <End Role="stopa_poreza" Type="Self.stopa_poreza" Multiplicity="1">

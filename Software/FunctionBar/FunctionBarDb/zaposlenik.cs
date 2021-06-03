@@ -11,7 +11,8 @@ namespace FunctionBarDb
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Drawing;
+
     public partial class zaposlenik
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,7 +33,28 @@ namespace FunctionBarDb
         public int id_vrsta_uloge { get; set; }
         public string korisnicko_ime { get; set; }
         public string lozinka { get; set; }
-    
+        public string putanja { get; set; }
+        public Image slika2
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(slika_putanja))
+                {
+                    string startupPath = Environment.CurrentDirectory + "\\Resources\\" + slika_putanja;
+                    Console.WriteLine(startupPath);
+                    try
+                    {
+                        return Image.FromFile(startupPath);
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                return null;
+            }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<narudzbenica> narudzbenicas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -42,6 +42,8 @@
             this.vrstaartiklaBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.vrsta_artiklaTableAdapter1 = new FunctionBar._PI21_19_DBDataSet1TableAdapters.vrsta_artiklaTableAdapter();
             this.dgvVrstaArtikla = new System.Windows.Forms.DataGridView();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrstaartiklaBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this._PI21_19_DBDataSet2 = new FunctionBar._PI21_19_DBDataSet2();
             this.artiklBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artiklTableAdapter = new FunctionBar._PI21_19_DBDataSet2TableAdapters.artiklTableAdapter();
@@ -49,9 +51,8 @@
             this.nazivDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artiklBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrstaartiklaBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.slika = new System.Windows.Forms.DataGridViewImageColumn();
-            this.vrstaartiklaBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource1)).BeginInit();
@@ -60,11 +61,12 @@
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVrstaArtikla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAzurirajArtikl
@@ -160,6 +162,17 @@
             this.dgvVrstaArtikla.TabIndex = 5;
             this.dgvVrstaArtikla.SelectionChanged += new System.EventHandler(this.dgvVrstaArtikla_SelectionChanged);
             // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // vrstaartiklaBindingSource5
+            // 
+            this.vrstaartiklaBindingSource5.DataSource = typeof(FunctionBarDb.vrsta_artikla);
+            // 
             // _PI21_19_DBDataSet2
             // 
             this._PI21_19_DBDataSet2.DataSetName = "_PI21_19_DBDataSet2";
@@ -203,12 +216,9 @@
             // 
             this.artiklBindingSource1.DataSource = typeof(FunctionBarDb.artikl);
             // 
-            // nazivDataGridViewTextBoxColumn
+            // vrstaartiklaBindingSource6
             // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            this.nazivDataGridViewTextBoxColumn.Width = 300;
+            this.vrstaartiklaBindingSource6.DataSource = typeof(FunctionBarDb.vrsta_artikla);
             // 
             // slika
             // 
@@ -217,10 +227,6 @@
             this.slika.Name = "slika";
             this.slika.ReadOnly = true;
             this.slika.Width = 220;
-            // 
-            // vrstaartiklaBindingSource5
-            // 
-            this.vrstaartiklaBindingSource5.DataSource = typeof(FunctionBarDb.vrsta_artikla);
             // 
             // ArtikliForm
             // 
@@ -244,11 +250,12 @@
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVrstaArtikla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,8 +281,9 @@
         private System.Windows.Forms.DataGridView dgvArtikl;
         private System.Windows.Forms.BindingSource artiklBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn slika;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn slika;
+        private System.Windows.Forms.BindingSource vrstaartiklaBindingSource6;
     }
 }

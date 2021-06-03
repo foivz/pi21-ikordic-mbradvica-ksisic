@@ -147,6 +147,7 @@
           <Property Name="id_vrsta_uloge" Type="int" Nullable="false" />
           <Property Name="korisnicko_ime" Type="text" Nullable="false" />
           <Property Name="lozinka" Type="text" Nullable="false" />
+          <Property Name="putanja" Type="text" />
         </EntityType>
         <Association Name="FK_artikl_stopa_poreza">
           <End Role="stopa_poreza" Type="Self.stopa_poreza" Multiplicity="1">
@@ -600,6 +601,7 @@
           <NavigationProperty Name="racuns" Relationship="Self.FK_racun_zaposlenik" FromRole="zaposlenik" ToRole="racun" />
           <NavigationProperty Name="rezervacijas" Relationship="Self.FK_rezervacija_zaposlenik" FromRole="zaposlenik" ToRole="rezervacija" />
           <NavigationProperty Name="vrsta_uloge" Relationship="Self.FK_zaposlenik_vrsta_uloge" FromRole="zaposlenik" ToRole="vrsta_uloge" />
+          <Property Name="putanja" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_artikl_stopa_poreza">
           <End Role="stopa_poreza" Type="Self.stopa_poreza" Multiplicity="1" />
@@ -1036,6 +1038,7 @@
           <EntitySetMapping Name="zaposleniks">
             <EntityTypeMapping TypeName="FBarDB.zaposlenik">
               <MappingFragment StoreEntitySet="zaposlenik">
+                <ScalarProperty Name="putanja" ColumnName="putanja" />
                 <ScalarProperty Name="OIB" ColumnName="OIB" />
                 <ScalarProperty Name="ime" ColumnName="ime" />
                 <ScalarProperty Name="prezime" ColumnName="prezime" />

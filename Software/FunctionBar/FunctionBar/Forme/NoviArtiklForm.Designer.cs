@@ -31,6 +31,8 @@
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnPovratak = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNabavnaCijena = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbVrstaArtikla = new System.Windows.Forms.ComboBox();
             this.cbStopaPoreza = new System.Windows.Forms.ComboBox();
@@ -43,8 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNabavnaCijena = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,22 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Podaci o artiklu";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtNabavnaCijena
+            // 
+            this.txtNabavnaCijena.Location = new System.Drawing.Point(91, 208);
+            this.txtNabavnaCijena.Name = "txtNabavnaCijena";
+            this.txtNabavnaCijena.Size = new System.Drawing.Size(124, 20);
+            this.txtNabavnaCijena.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(7, 211);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Nabavna cijena";
             // 
             // label5
             // 
@@ -192,21 +208,6 @@
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Naziv";
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(7, 211);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Nabavna cijena";
-            // 
-            // txtNabavnaCijena
-            // 
-            this.txtNabavnaCijena.Location = new System.Drawing.Point(91, 208);
-            this.txtNabavnaCijena.Name = "txtNabavnaCijena";
-            this.txtNabavnaCijena.Size = new System.Drawing.Size(124, 20);
-            this.txtNabavnaCijena.TabIndex = 7;
             // 
             // NoviArtiklForm
             // 

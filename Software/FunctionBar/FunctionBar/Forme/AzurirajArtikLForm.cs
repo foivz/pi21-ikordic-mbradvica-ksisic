@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity.Migrations;
 using FunctionBarDb;
 namespace FunctionBar.Forme
 {
@@ -21,33 +22,16 @@ namespace FunctionBar.Forme
 
         private void AzurirajArtikLForm_Load(object sender, EventArgs e)
         {
-            UcitajStope();
             UcitajVrste();
             UcitajPodatke();
         }
 
-        private void UcitajStope()
-        {
-            List<stopa_poreza> stope;
-            using (var context = new FunctionBarDB())
-            {
-                stope = context.stopa_poreza.ToList();
-            }
-            cbStopaPoreza.DataSource = stope;
 
-            for (int i = 0; i < cbStopaPoreza.Items.Count; i++)
-            {
-                if ((cbStopaPoreza.Items[i] as stopa_poreza).ID == odabranArtikl.id_stopa_poreza)
-                {
-                    cbStopaPoreza.SelectedIndex = i;
-                    break;
-                }
-            }
-        }
 
         private void UcitajVrste()
         {
             List<vrsta_artikla> vrsteArtikala;
+            int idVrste;
             using (var context = new FunctionBarDB())
             {
                 vrsteArtikala = context.vrsta_artikla.ToList();
@@ -59,6 +43,7 @@ namespace FunctionBar.Forme
                 if ((cbVrstaArtikla.Items[i] as vrsta_artikla).ID == odabranArtikl.id_vrsta_artikla)
                 {
                     cbVrstaArtikla.SelectedIndex = i;
+                    idVrste = odabranArtikl.id_vrsta_artikla;
                     break;
                 }
             }
@@ -82,26 +67,28 @@ namespace FunctionBar.Forme
         {
             using (var context=new FunctionBarDB())
             {
-                string naziv = txtNaziv.Text;
-                int cijena = int.Parse(txtCijena.Text);
-                float normativ = float.Parse(txtNormativ.Text);
-                float kolicina = float.Parse(txtKoličina.Text);
-                float nabavna = float.Parse(txtNabavnaCijena.Text);
-                vrsta_artikla vrsta = cbVrstaArtikla.SelectedItem as vrsta_artikla;
-                /* context.vrsta_artikla.Attach(vrsta);
-                stopa_poreza stopa = cbStopaPoreza.SelectedItem as stopa_poreza;
-                context.stopa_poreza.Attach(stopa);
-                context.artikls.Attach(odabranArtikl);
-                */
-                odabranArtikl.naziv = naziv;
-                odabranArtikl.cijena = cijena;
-                odabranArtikl.normativ = normativ;
-                odabranArtikl.kolicina_na_zalihi = kolicina;
-                odabranArtikl.nabavna_cijena = nabavna;
-              /*  odabranArtikl.vrsta_artikla = vrsta;
-                odabranArtikl.stopa_poreza = stopa;
-              */
-                context.SaveChanges();
+                try
+                {
+                    string naziv = txtNaziv.Text;
+                    int cijena = int.Parse(txtCijena.Text);
+                    float normativ = float.Parse(txtNormativ.Text);
+                    float kolicina = float.Parse(txtKoličina.Text);
+                    float nabavna = float.Parse(txtNabavnaCijena.Text);
+                    /*  vrsta_artikla vrsta = cbVrstaArtikla.SelectedItem as vrsta_artikla;
+                      context.vrsta_artikla.Attach(vrsta);
+                    */
+                    context.artikls.Attach(odabranArtikl);
+                    odabranArtikl.naziv = naziv;
+                    odabranArtikl.cijena = cijena;
+                    odabranArtikl.normativ = normativ;
+                    odabranArtikl.kolicina_na_zalihi = kolicina;
+                    odabranArtikl.nabavna_cijena = nabavna;
+                    context.SaveChanges();
+                }
+               catch(Exception ex)
+                {
+                    MessageBox.Show("Molim unesite ispravne vrijednosti");
+                }
             }
             this.Close();
         }

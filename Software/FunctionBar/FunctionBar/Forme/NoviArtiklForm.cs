@@ -17,7 +17,7 @@ namespace FunctionBar.Forme
         {
             InitializeComponent();
         }
-
+        
         private void btnPovratak_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,6 +35,8 @@ namespace FunctionBar.Forme
             using(var context=new FunctionBarDB())
             {
                 vrsteArtikala = context.vrsta_artikla.ToList();
+          
+
             }
             cbVrstaArtikla.DataSource = vrsteArtikala;
         }
@@ -76,6 +78,11 @@ namespace FunctionBar.Forme
                 context.SaveChanges();
             }
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

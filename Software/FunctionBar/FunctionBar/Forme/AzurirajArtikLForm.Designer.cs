@@ -31,9 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNabavnaCijena = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.cbVrstaArtikla = new System.Windows.Forms.ComboBox();
-            this.cbStopaPoreza = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtKoličina = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,17 +43,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnPovratak = new System.Windows.Forms.Button();
+            this.txt1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txt1);
             this.groupBox1.Controls.Add(this.txtNabavnaCijena);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbVrstaArtikla);
-            this.groupBox1.Controls.Add(this.cbStopaPoreza);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtKoličina);
             this.groupBox1.Controls.Add(this.label4);
@@ -67,33 +65,25 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(26, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(254, 257);
+            this.groupBox1.Size = new System.Drawing.Size(254, 224);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Podaci o artiklu";
             // 
             // txtNabavnaCijena
             // 
-            this.txtNabavnaCijena.Location = new System.Drawing.Point(91, 208);
+            this.txtNabavnaCijena.Location = new System.Drawing.Point(91, 180);
             this.txtNabavnaCijena.Name = "txtNabavnaCijena";
             this.txtNabavnaCijena.Size = new System.Drawing.Size(124, 20);
             this.txtNabavnaCijena.TabIndex = 7;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(7, 211);
+            this.label7.Location = new System.Drawing.Point(6, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 16);
             this.label7.TabIndex = 13;
             this.label7.Text = "Nabavna cijena";
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(6, 180);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Stopa poreza";
             // 
             // cbVrstaArtikla
             // 
@@ -102,14 +92,6 @@
             this.cbVrstaArtikla.Name = "cbVrstaArtikla";
             this.cbVrstaArtikla.Size = new System.Drawing.Size(124, 21);
             this.cbVrstaArtikla.TabIndex = 11;
-            // 
-            // cbStopaPoreza
-            // 
-            this.cbStopaPoreza.FormattingEnabled = true;
-            this.cbStopaPoreza.Location = new System.Drawing.Point(91, 177);
-            this.cbStopaPoreza.Name = "cbStopaPoreza";
-            this.cbStopaPoreza.Size = new System.Drawing.Size(124, 21);
-            this.cbStopaPoreza.TabIndex = 10;
             // 
             // label6
             // 
@@ -188,7 +170,7 @@
             // 
             this.btnSpremi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSpremi.Location = new System.Drawing.Point(26, 303);
+            this.btnSpremi.Location = new System.Drawing.Point(25, 267);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(96, 29);
             this.btnSpremi.TabIndex = 8;
@@ -200,7 +182,7 @@
             // 
             this.btnPovratak.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPovratak.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPovratak.Location = new System.Drawing.Point(184, 303);
+            this.btnPovratak.Location = new System.Drawing.Point(184, 267);
             this.btnPovratak.Name = "btnPovratak";
             this.btnPovratak.Size = new System.Drawing.Size(96, 29);
             this.btnPovratak.TabIndex = 7;
@@ -208,12 +190,19 @@
             this.btnPovratak.UseVisualStyleBackColor = false;
             this.btnPovratak.Click += new System.EventHandler(this.btnPovratak_Click);
             // 
+            // txt1
+            // 
+            this.txt1.Location = new System.Drawing.Point(91, 204);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(100, 20);
+            this.txt1.TabIndex = 14;
+            // 
             // AzurirajArtikLForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(308, 366);
+            this.ClientSize = new System.Drawing.Size(308, 312);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.btnPovratak);
             this.Controls.Add(this.groupBox1);
@@ -231,9 +220,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNabavnaCijena;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbVrstaArtikla;
-        private System.Windows.Forms.ComboBox cbStopaPoreza;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtKoličina;
         private System.Windows.Forms.Label label4;
@@ -245,5 +232,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnPovratak;
+        private System.Windows.Forms.TextBox txt1;
     }
 }

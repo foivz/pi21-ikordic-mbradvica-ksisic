@@ -115,6 +115,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="VrstaArtikla.code.cs" />
+    <Compile Include="VrstaUloge.code.cs" />
     <Compile Include="vrsta_artikla.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

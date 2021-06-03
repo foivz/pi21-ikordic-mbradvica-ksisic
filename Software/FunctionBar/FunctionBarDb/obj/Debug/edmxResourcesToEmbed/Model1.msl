@@ -144,6 +144,7 @@
     <EntitySetMapping Name="zaposleniks">
       <EntityTypeMapping TypeName="FBarDB.zaposlenik">
         <MappingFragment StoreEntitySet="zaposlenik">
+          <ScalarProperty Name="putanja" ColumnName="putanja" />
           <ScalarProperty Name="OIB" ColumnName="OIB" />
           <ScalarProperty Name="ime" ColumnName="ime" />
           <ScalarProperty Name="prezime" ColumnName="prezime" />
