@@ -46,7 +46,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="datum" Type="datetime" Nullable="false" />
     <Property Name="id_zaposlenik" Type="bigint" Nullable="false" />
   </EntityType>
@@ -83,7 +83,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="broj_mjesta" Type="int" />
     <Property Name="id_rezervacije" Type="int" Nullable="false" />
     <Property Name="id_vrsta_stola" Type="int" Nullable="false" />
