@@ -95,6 +95,12 @@
     <Compile Include="Forme\NoviArtiklForm.Designer.cs">
       <DependentUpon>NoviArtiklForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\RacuniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\RacuniForm.Designer.cs">
+      <DependentUpon>RacuniForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\ZaposleniciForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,12 +113,6 @@
     <Compile Include="Forme\ZaprimanjeRobe.Designer.cs">
       <DependentUpon>ZaprimanjeRobe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\RačuniForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forme\RačuniForm.Designer.cs">
-      <DependentUpon>RačuniForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forme\RezervacijeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +121,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\NaruciArtikl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\NaruciArtikl.Designer.cs">
+      <DependentUpon>NaruciArtikl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UnesiZaposlenikaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,14 +179,14 @@
     <EmbeddedResource Include="Forme\NoviArtiklForm.resx">
       <DependentUpon>NoviArtiklForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\RacuniForm.resx">
+      <DependentUpon>RacuniForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\ZaposleniciForm.resx">
       <DependentUpon>ZaposleniciForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\ZaprimanjeRobe.resx">
       <DependentUpon>ZaprimanjeRobe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forme\RačuniForm.resx">
-      <DependentUpon>RačuniForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\RezervacijeForm.resx">
       <DependentUpon>RezervacijeForm.cs</DependentUpon>
@@ -195,6 +201,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\NaruciArtikl.resx">
+      <DependentUpon>NaruciArtikl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UnesiZaposlenikaForm.resx">
       <DependentUpon>UnesiZaposlenikaForm.cs</DependentUpon>
     </EmbeddedResource>

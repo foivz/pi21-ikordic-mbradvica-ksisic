@@ -5,7 +5,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="naziv" Type="text" />
+    <Property Name="naziv" Type="varchar(max)" />
     <Property Name="cijena" Type="float" />
     <Property Name="normativ" Type="float" />
     <Property Name="kolicina_na_zalihi" Type="float" />
@@ -36,7 +36,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="datum_narudzbe" Type="date" />
     <Property Name="datum_zaprimanja" Type="date" />
     <Property Name="id_dobavljac" Type="int" Nullable="false" />
@@ -133,8 +133,8 @@
       <PropertyRef Name="OIB" />
     </Key>
     <Property Name="OIB" Type="bigint" Nullable="false" />
-    <Property Name="ime" Type="text" Nullable="false" />
-    <Property Name="prezime" Type="text" Nullable="false" />
+    <Property Name="ime" Type="varchar(max)" Nullable="false" />
+    <Property Name="prezime" Type="varchar(max)" Nullable="false" />
     <Property Name="datum_rodenja" Type="date" />
     <Property Name="adresa" Type="text" />
     <Property Name="strucna_sprema" Type="text" />

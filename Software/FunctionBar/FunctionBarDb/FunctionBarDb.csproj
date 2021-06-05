@@ -61,6 +61,7 @@
     <Compile Include="artikl.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Dobavljac.code.cs" />
     <Compile Include="dobavljac.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

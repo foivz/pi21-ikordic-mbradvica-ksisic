@@ -91,7 +91,7 @@ namespace FunctionBar
         private void uxRacuni_Click(object sender, EventArgs e)
         {
             uxAktivnaForma.Controls.Clear();
-            RačuniForm aktivnaForma = new RačuniForm();
+            RacuniForm aktivnaForma = new RacuniForm();
             aktivnaForma.TopLevel = false;
             aktivnaForma.AutoScroll = true;
             aktivnaForma.FormBorderStyle = FormBorderStyle.None;
