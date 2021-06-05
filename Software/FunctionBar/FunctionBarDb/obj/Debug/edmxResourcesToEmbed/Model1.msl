@@ -26,16 +26,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="gosts">
-      <EntityTypeMapping TypeName="FBarDB.gost">
-        <MappingFragment StoreEntitySet="gost">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="ime" ColumnName="ime" />
-          <ScalarProperty Name="prezime" ColumnName="prezime" />
-          <ScalarProperty Name="kontakt" ColumnName="kontakt" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="narudzbenicas">
       <EntityTypeMapping TypeName="FBarDB.narudzbenica">
         <MappingFragment StoreEntitySet="narudzbenica">
@@ -59,11 +49,13 @@
     <EntitySetMapping Name="rezervacijas">
       <EntityTypeMapping TypeName="FBarDB.rezervacija">
         <MappingFragment StoreEntitySet="rezervacija">
+          <ScalarProperty Name="Kontakt" ColumnName="Kontakt" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="datum_zaprimanja" ColumnName="datum_zaprimanja" />
           <ScalarProperty Name="datum_rezervacije" ColumnName="datum_rezervacije" />
           <ScalarProperty Name="id_zaposlenik" ColumnName="id_zaposlenik" />
-          <ScalarProperty Name="id_gost" ColumnName="id_gost" />
           <ScalarProperty Name="id_stol" ColumnName="id_stol" />
         </MappingFragment>
       </EntityTypeMapping>

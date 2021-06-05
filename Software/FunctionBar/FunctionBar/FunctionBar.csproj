@@ -65,6 +65,12 @@
     <Compile Include="Forme\AzurirajArtikLForm.Designer.cs">
       <DependentUpon>AzurirajArtikLForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\AzurirajRezervaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\AzurirajRezervaciju.Designer.cs">
+      <DependentUpon>AzurirajRezervaciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\AzurirajZaposlenikaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="Forme\RacuniForm.Designer.cs">
       <DependentUpon>RacuniForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\UnesiRezervacijuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\UnesiRezervacijuForm.Designer.cs">
+      <DependentUpon>UnesiRezervacijuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\ZaposleniciForm.cs">
       <SubType>Form</SubType>
@@ -158,11 +170,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_PI21_19_DBDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_PI21_19_DBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_PI21_19_DBDataSet5.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forme\ArtikliForm.resx">
       <DependentUpon>ArtikliForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\AzurirajArtikLForm.resx">
       <DependentUpon>AzurirajArtikLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\AzurirajRezervaciju.resx">
+      <DependentUpon>AzurirajRezervaciju.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\AzurirajZaposlenikaForm.resx">
       <DependentUpon>AzurirajZaposlenikaForm.cs</DependentUpon>
@@ -181,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\RacuniForm.resx">
       <DependentUpon>RacuniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\UnesiRezervacijuForm.resx">
+      <DependentUpon>UnesiRezervacijuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\ZaposleniciForm.resx">
       <DependentUpon>ZaposleniciForm.cs</DependentUpon>
@@ -287,6 +310,17 @@
     </None>
     <None Include="_PI21_19_DBDataSet4.xss">
       <DependentUpon>_PI21_19_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_PI21_19_DBDataSet5.xsc">
+      <DependentUpon>_PI21_19_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_PI21_19_DBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_PI21_19_DBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_PI21_19_DBDataSet5.xss">
+      <DependentUpon>_PI21_19_DBDataSet5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

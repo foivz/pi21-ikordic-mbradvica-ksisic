@@ -28,16 +28,6 @@
     <Property Name="IBAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="narudzbenicas" Relationship="Self.FK_narudzbenica_dobavljac" FromRole="dobavljac" ToRole="narudzbenica" />
   </EntityType>
-  <EntityType Name="gost">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="prezime" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="kontakt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="rezervacijas" Relationship="Self.FK_rezervacija_gost" FromRole="gost" ToRole="rezervacija" />
-  </EntityType>
   <EntityType Name="narudzbenica">
     <Key>
       <PropertyRef Name="ID" />
@@ -69,11 +59,12 @@
     <Property Name="datum_zaprimanja" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="datum_rezervacije" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="id_zaposlenik" Type="Int64" Nullable="false" />
-    <Property Name="id_gost" Type="Int32" Nullable="false" />
     <Property Name="id_stol" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="gost" Relationship="Self.FK_rezervacija_gost" FromRole="rezervacija" ToRole="gost" />
     <NavigationProperty Name="stol" Relationship="Self.FK_rezervacija_stol" FromRole="rezervacija" ToRole="stol" />
     <NavigationProperty Name="zaposlenik" Relationship="Self.FK_rezervacija_zaposlenik" FromRole="rezervacija" ToRole="zaposlenik" />
+    <Property Name="Ime" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Prezime" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Kontakt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="stavka_narudzbe">
     <Key>
@@ -103,7 +94,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="broj_mjesta" Type="Int32" />
-    <Property Name="id_rezervacije" Type="Int32" Nullable="false" />
+    <Property Name="id_rezervacije" Type="Int32" />
     <Property Name="id_vrsta_stola" Type="Int32" Nullable="false" />
     <NavigationProperty Name="rezervacijas" Relationship="Self.FK_rezervacija_stol" FromRole="stol" ToRole="rezervacija" />
     <NavigationProperty Name="vrsta_stola" Relationship="Self.FK_stol_vrsta_stola" FromRole="stol" ToRole="vrsta_stola" />
@@ -234,18 +225,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_rezervacija_gost">
-    <End Role="gost" Type="Self.gost" Multiplicity="1" />
-    <End Role="rezervacija" Type="Self.rezervacija" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="gost">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="rezervacija">
-        <PropertyRef Name="id_gost" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_narudzbenica_zaposlenik">
     <End Role="zaposlenik" Type="Self.zaposlenik" Multiplicity="1" />
     <End Role="narudzbenica" Type="Self.narudzbenica" Multiplicity="*" />
@@ -347,7 +326,6 @@
   <EntityContainer Name="FunctionBarDB" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="artikls" EntityType="Self.artikl" />
     <EntitySet Name="dobavljacs" EntityType="Self.dobavljac" />
-    <EntitySet Name="gosts" EntityType="Self.gost" />
     <EntitySet Name="narudzbenicas" EntityType="Self.narudzbenica" />
     <EntitySet Name="racuns" EntityType="Self.racun" />
     <EntitySet Name="rezervacijas" EntityType="Self.rezervacija" />
@@ -379,10 +357,6 @@
     <AssociationSet Name="FK_narudzbenica_dobavljac" Association="Self.FK_narudzbenica_dobavljac">
       <End Role="dobavljac" EntitySet="dobavljacs" />
       <End Role="narudzbenica" EntitySet="narudzbenicas" />
-    </AssociationSet>
-    <AssociationSet Name="FK_rezervacija_gost" Association="Self.FK_rezervacija_gost">
-      <End Role="gost" EntitySet="gosts" />
-      <End Role="rezervacija" EntitySet="rezervacijas" />
     </AssociationSet>
     <AssociationSet Name="FK_narudzbenica_zaposlenik" Association="Self.FK_narudzbenica_zaposlenik">
       <End Role="zaposlenik" EntitySet="zaposleniks" />

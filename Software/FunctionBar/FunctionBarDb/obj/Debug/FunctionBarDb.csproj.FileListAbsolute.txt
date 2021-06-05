@@ -12,3 +12,17 @@ C:\Users\Matix\Documents\pi21-ikordic-mbradvica-ksisic\mirela\Software\FunctionB
 C:\Users\Matix\Documents\pi21-ikordic-mbradvica-ksisic\mirela\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.CopyComplete
 C:\Users\Matix\Documents\pi21-ikordic-mbradvica-ksisic\mirela\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.dll
 C:\Users\Matix\Documents\pi21-ikordic-mbradvica-ksisic\mirela\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.pdb
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\FunctionBarDb.dll.config
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\FunctionBarDb.dll
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\FunctionBarDb.pdb
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.dll
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.SqlServer.dll
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.xml
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.SqlServer.xml
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csprojAssemblyReference.cache
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.Properties.Resources.resources
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.GenerateResource.cache
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.CoreCompileInputs.cache
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.CopyComplete
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.dll
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.pdb

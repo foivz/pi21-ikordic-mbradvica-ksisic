@@ -18,10 +18,11 @@ namespace FunctionBarDb
         public System.DateTime datum_zaprimanja { get; set; }
         public System.DateTime datum_rezervacije { get; set; }
         public long id_zaposlenik { get; set; }
-        public int id_gost { get; set; }
         public int id_stol { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string Kontakt { get; set; }
     
-        public virtual gost gost { get; set; }
         public virtual stol stol { get; set; }
         public virtual zaposlenik zaposlenik { get; set; }
     }

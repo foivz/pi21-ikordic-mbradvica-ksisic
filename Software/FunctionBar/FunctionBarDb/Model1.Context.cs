@@ -29,7 +29,6 @@ namespace FunctionBarDb
     
         public virtual DbSet<artikl> artikls { get; set; }
         public virtual DbSet<dobavljac> dobavljacs { get; set; }
-        public virtual DbSet<gost> gosts { get; set; }
         public virtual DbSet<narudzbenica> narudzbenicas { get; set; }
         public virtual DbSet<racun> racuns { get; set; }
         public virtual DbSet<rezervacija> rezervacijas { get; set; }

@@ -22,7 +22,7 @@ namespace FunctionBarDb
     
         public int ID { get; set; }
         public Nullable<int> broj_mjesta { get; set; }
-        public int id_rezervacije { get; set; }
+        public Nullable<int> id_rezervacije { get; set; }
         public int id_vrsta_stola { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

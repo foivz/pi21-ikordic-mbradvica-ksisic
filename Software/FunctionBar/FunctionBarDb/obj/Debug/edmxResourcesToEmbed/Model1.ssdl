@@ -23,15 +23,6 @@
     <Property Name="adresa" Type="text" />
     <Property Name="IBAN" Type="text" Nullable="false" />
   </EntityType>
-  <EntityType Name="gost">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
-    <Property Name="ime" Type="text" />
-    <Property Name="prezime" Type="nchar" MaxLength="10" />
-    <Property Name="kontakt" Type="text" />
-  </EntityType>
   <EntityType Name="narudzbenica">
     <Key>
       <PropertyRef Name="ID" />
@@ -54,12 +45,14 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="datum_zaprimanja" Type="datetime" Nullable="false" />
     <Property Name="datum_rezervacije" Type="datetime" Nullable="false" />
     <Property Name="id_zaposlenik" Type="bigint" Nullable="false" />
-    <Property Name="id_gost" Type="int" Nullable="false" />
     <Property Name="id_stol" Type="int" Nullable="false" />
+    <Property Name="Ime" Type="text" Nullable="false" />
+    <Property Name="Prezime" Type="text" Nullable="false" />
+    <Property Name="Kontakt" Type="text" />
   </EntityType>
   <EntityType Name="stavka_narudzbe">
     <Key>
@@ -85,7 +78,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="broj_mjesta" Type="int" />
-    <Property Name="id_rezervacije" Type="int" Nullable="false" />
+    <Property Name="id_rezervacije" Type="int" />
     <Property Name="id_vrsta_stola" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="stopa_poreza">
@@ -118,7 +111,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="naziv" Type="text" Nullable="false" />
   </EntityType>
   <EntityType Name="vrsta_uloge">
@@ -205,18 +198,6 @@
       </Principal>
       <Dependent Role="racun">
         <PropertyRef Name="id_zaposlenik" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_rezervacija_gost">
-    <End Role="gost" Type="Self.gost" Multiplicity="1" />
-    <End Role="rezervacija" Type="Self.rezervacija" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="gost">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="rezervacija">
-        <PropertyRef Name="id_gost" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -352,7 +333,6 @@
   <EntityContainer Name="FBarDBStoreContainer">
     <EntitySet Name="artikl" EntityType="Self.artikl" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dobavljac" EntityType="Self.dobavljac" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="gost" EntityType="Self.gost" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="narudzbenica" EntityType="Self.narudzbenica" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="racun" EntityType="Self.racun" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="rezervacija" EntityType="Self.rezervacija" Schema="dbo" store:Type="Tables" />
@@ -384,10 +364,6 @@
     <AssociationSet Name="FK_racun_zaposlenik" Association="Self.FK_racun_zaposlenik">
       <End Role="zaposlenik" EntitySet="zaposlenik" />
       <End Role="racun" EntitySet="racun" />
-    </AssociationSet>
-    <AssociationSet Name="FK_rezervacija_gost" Association="Self.FK_rezervacija_gost">
-      <End Role="gost" EntitySet="gost" />
-      <End Role="rezervacija" EntitySet="rezervacija" />
     </AssociationSet>
     <AssociationSet Name="FK_rezervacija_stol" Association="Self.FK_rezervacija_stol">
       <End Role="stol" EntitySet="stol" />
