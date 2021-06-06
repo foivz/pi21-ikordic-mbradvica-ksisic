@@ -33,20 +33,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dgvRezervacije = new System.Windows.Forms.DataGridView();
-            this._PI21_19_DBDataSet5 = new FunctionBar._PI21_19_DBDataSet5();
             this.rezervacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._PI21_19_DBDataSet5 = new FunctionBar._PI21_19_DBDataSet5();
             this.rezervacijaTableAdapter = new FunctionBar._PI21_19_DBDataSet5TableAdapters.rezervacijaTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumzaprimanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumrezervacijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idzaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idstolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kontaktDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -90,7 +89,6 @@
             this.iDDataGridViewTextBoxColumn,
             this.datumzaprimanjaDataGridViewTextBoxColumn,
             this.datumrezervacijeDataGridViewTextBoxColumn,
-            this.idzaposlenikDataGridViewTextBoxColumn,
             this.idstolDataGridViewTextBoxColumn,
             this.imeDataGridViewTextBoxColumn,
             this.prezimeDataGridViewTextBoxColumn,
@@ -102,15 +100,15 @@
             this.dgvRezervacije.TabIndex = 7;
             this.dgvRezervacije.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRezervacije_CellContentClick);
             // 
-            // _PI21_19_DBDataSet5
-            // 
-            this._PI21_19_DBDataSet5.DataSetName = "_PI21_19_DBDataSet5";
-            this._PI21_19_DBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // rezervacijaBindingSource
             // 
             this.rezervacijaBindingSource.DataMember = "rezervacija";
             this.rezervacijaBindingSource.DataSource = this._PI21_19_DBDataSet5;
+            // 
+            // _PI21_19_DBDataSet5
+            // 
+            this._PI21_19_DBDataSet5.DataSetName = "_PI21_19_DBDataSet5";
+            this._PI21_19_DBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rezervacijaTableAdapter
             // 
@@ -135,16 +133,10 @@
             this.datumrezervacijeDataGridViewTextBoxColumn.HeaderText = "datum_rezervacije";
             this.datumrezervacijeDataGridViewTextBoxColumn.Name = "datumrezervacijeDataGridViewTextBoxColumn";
             // 
-            // idzaposlenikDataGridViewTextBoxColumn
-            // 
-            this.idzaposlenikDataGridViewTextBoxColumn.DataPropertyName = "id_zaposlenik";
-            this.idzaposlenikDataGridViewTextBoxColumn.HeaderText = "id_zaposlenik";
-            this.idzaposlenikDataGridViewTextBoxColumn.Name = "idzaposlenikDataGridViewTextBoxColumn";
-            // 
             // idstolDataGridViewTextBoxColumn
             // 
             this.idstolDataGridViewTextBoxColumn.DataPropertyName = "id_stol";
-            this.idstolDataGridViewTextBoxColumn.HeaderText = "id_stol";
+            this.idstolDataGridViewTextBoxColumn.HeaderText = "Stol";
             this.idstolDataGridViewTextBoxColumn.Name = "idstolDataGridViewTextBoxColumn";
             // 
             // imeDataGridViewTextBoxColumn
@@ -179,8 +171,8 @@
             this.Text = "RezervacijeForm";
             this.Load += new System.EventHandler(this.RezervacijeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,7 +188,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumzaprimanjaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumrezervacijeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idzaposlenikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idstolDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;

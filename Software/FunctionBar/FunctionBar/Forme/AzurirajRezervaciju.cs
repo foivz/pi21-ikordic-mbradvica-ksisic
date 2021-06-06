@@ -63,11 +63,14 @@ namespace FunctionBar.Forme
                     string ime = txtIme.Text;
                     string prezime = txtPrezime.Text;
                     string kontakt = txtKontakt.Text;
+                    stol stol = cbStol.SelectedItem as stol;
+                   context.stols.Attach(stol);
                     context.rezervacijas.Attach(odabranaRezervacija);
                     odabranaRezervacija.Ime = ime;
                     odabranaRezervacija.Prezime = prezime;
                     odabranaRezervacija.Kontakt = kontakt;
                     odabranaRezervacija.datum_rezervacije = dtPicker.Value;
+                    odabranaRezervacija.stol = stol;
                     context.SaveChanges();
                 }
                 catch
