@@ -238,7 +238,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_stavka_narudzbe_narudzbenica">
-    <End Role="narudzbenica" Type="Self.narudzbenica" Multiplicity="1" />
+    <End Role="narudzbenica" Type="Self.narudzbenica" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="stavka_narudzbe" Type="Self.stavka_narudzbe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="narudzbenica">
