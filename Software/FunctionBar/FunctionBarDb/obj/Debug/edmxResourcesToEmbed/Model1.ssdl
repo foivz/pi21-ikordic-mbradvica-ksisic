@@ -134,8 +134,8 @@
     <Property Name="strucna_sprema" Type="text" />
     <Property Name="slika_putanja" Type="text" />
     <Property Name="id_vrsta_uloge" Type="int" Nullable="false" />
-    <Property Name="korisnicko_ime" Type="text" Nullable="false" />
-    <Property Name="lozinka" Type="text" Nullable="false" />
+    <Property Name="korisnicko_ime" Type="varchar(max)" Nullable="false" />
+    <Property Name="lozinka" Type="varchar(max)" Nullable="false" />
     <Property Name="putanja" Type="text" />
   </EntityType>
   <Association Name="FK_artikl_stopa_poreza">

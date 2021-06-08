@@ -54,11 +54,11 @@
             this.artiklBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vrstaartiklaBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.gbDodaj = new System.Windows.Forms.GroupBox();
+            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnPlus = new System.Windows.Forms.Button();
             this.labelKolicina = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnPlus = new System.Windows.Forms.Button();
-            this.btnMinus = new System.Windows.Forms.Button();
-            this.btnDodaj = new System.Windows.Forms.Button();
             this.dgvZaKucanje = new System.Windows.Forms.DataGridView();
             this.btnIspisiRacun = new System.Windows.Forms.Button();
             this.btnUkloniArtikl = new System.Windows.Forms.Button();
@@ -257,6 +257,43 @@
             this.gbDodaj.TabIndex = 7;
             this.gbDodaj.TabStop = false;
             // 
+            // btnDodaj
+            // 
+            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodaj.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnDodaj.Location = new System.Drawing.Point(59, 148);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(83, 40);
+            this.btnDodaj.TabIndex = 18;
+            this.btnDodaj.Text = "Dodaj ";
+            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinus.ForeColor = System.Drawing.Color.Red;
+            this.btnMinus.Location = new System.Drawing.Point(120, 90);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(63, 34);
+            this.btnMinus.TabIndex = 17;
+            this.btnMinus.Text = "-";
+            this.btnMinus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPlus.Location = new System.Drawing.Point(17, 90);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(63, 34);
+            this.btnPlus.TabIndex = 16;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
             // labelKolicina
             // 
             this.labelKolicina.AutoSize = true;
@@ -278,43 +315,6 @@
             this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Količina:";
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnPlus.Location = new System.Drawing.Point(17, 90);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(63, 34);
-            this.btnPlus.TabIndex = 16;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
-            // 
-            // btnMinus
-            // 
-            this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinus.ForeColor = System.Drawing.Color.Red;
-            this.btnMinus.Location = new System.Drawing.Point(120, 90);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(63, 34);
-            this.btnMinus.TabIndex = 17;
-            this.btnMinus.Text = "-";
-            this.btnMinus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodaj.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnDodaj.Location = new System.Drawing.Point(59, 148);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(83, 40);
-            this.btnDodaj.TabIndex = 18;
-            this.btnDodaj.Text = "Dodaj ";
-            this.btnDodaj.UseVisualStyleBackColor = true;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // dgvZaKucanje
             // 

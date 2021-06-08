@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FunctionBar.Forme;
 
 namespace FunctionBar
 {
@@ -13,8 +14,12 @@ namespace FunctionBar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            GlavnaForma frm = new GlavnaForma();
-            Application.Run(frm);
+            PrijavaForm prijava = new PrijavaForm();
+
+            //GlavnaForma frm = new GlavnaForma();
+
+            Application.Run(prijava);
+
         }
     }
 }

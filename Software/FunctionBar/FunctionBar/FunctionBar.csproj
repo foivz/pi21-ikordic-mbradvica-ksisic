@@ -101,6 +101,12 @@
     <Compile Include="Forme\NoviArtiklForm.Designer.cs">
       <DependentUpon>NoviArtiklForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\PrijavaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PrijavaForm.Designer.cs">
+      <DependentUpon>PrijavaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\RacuniForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\NoviArtiklForm.resx">
       <DependentUpon>NoviArtiklForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PrijavaForm.resx">
+      <DependentUpon>PrijavaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\RacuniForm.resx">
       <DependentUpon>RacuniForm.cs</DependentUpon>
@@ -346,6 +355,12 @@
       <Project>{e72de94c-abbc-4f72-9789-fbc05cbf36ce}</Project>
       <Name>FunctionBarDb</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\cover.png" />
+    <None Include="Resources\Asset 31.png" />
+    <None Include="Resources\Asset 21.png" />
+    <None Include="Resources\cover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
