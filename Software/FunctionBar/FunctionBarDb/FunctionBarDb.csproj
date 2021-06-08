@@ -124,6 +124,7 @@
     <Compile Include="vrsta_uloge.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Zaposlenik.code.cs" />
     <Compile Include="zaposlenik.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

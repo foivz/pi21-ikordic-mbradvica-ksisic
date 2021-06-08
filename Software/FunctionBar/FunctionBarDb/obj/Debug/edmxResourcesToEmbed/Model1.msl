@@ -4,6 +4,7 @@
     <EntitySetMapping Name="artikls">
       <EntityTypeMapping TypeName="FBarDB.artikl">
         <MappingFragment StoreEntitySet="artikl">
+          <ScalarProperty Name="aktivan" ColumnName="aktivan" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="naziv" ColumnName="naziv" />
           <ScalarProperty Name="cijena" ColumnName="cijena" />

@@ -29,6 +29,7 @@ namespace FunctionBarDb
         public Nullable<double> nabavna_cijena { get; set; }
         public int id_vrsta_artikla { get; set; }
         public int id_stopa_poreza { get; set; }
+        public Nullable<bool> aktivan { get; set; }
     
         public virtual stopa_poreza stopa_poreza { get; set; }
         public virtual vrsta_artikla vrsta_artikla { get; set; }

@@ -83,6 +83,7 @@ namespace FunctionBar.Forme
                     odabranZaposlenik.korisnicko_ime = korime;
                     odabranZaposlenik.lozinka = lozinka;
                     odabranZaposlenik.datum_rodenja = dtDatum.Value;
+                    odabranZaposlenik.id_vrsta_uloge = (cbUloga.SelectedItem as vrsta_uloge).ID;
                     context.SaveChanges();
                 }
                 catch(Exception ex)

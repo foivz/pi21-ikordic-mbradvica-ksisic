@@ -62,6 +62,24 @@
             this.btnIzbrisiZaposlenika = new System.Windows.Forms.Button();
             this.btnUnesiZaposlenika = new System.Windows.Forms.Button();
             this.btnAzurirajZaposlenika = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.zaposlenikBindingSource11 = new System.Windows.Forms.BindingSource(this.components);
+            this.slikaDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.oIBDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumrodenjaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strucnaspremaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slikaputanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idvrstaulogeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnickoimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinkaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.putanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.narudzbenicasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.racunsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rezervacijasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrstaulogeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource2)).BeginInit();
@@ -82,6 +100,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource11)).BeginInit();
             this.SuspendLayout();
             // 
             // zaposlenikBindingSource
@@ -276,12 +296,142 @@
             this.btnAzurirajZaposlenika.UseVisualStyleBackColor = false;
             this.btnAzurirajZaposlenika.Click += new System.EventHandler(this.btnAzurirajZaposlenika_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.slikaDataGridViewImageColumn,
+            this.oIBDataGridViewTextBoxColumn1,
+            this.imeDataGridViewTextBoxColumn1,
+            this.prezimeDataGridViewTextBoxColumn1,
+            this.datumrodenjaDataGridViewTextBoxColumn1,
+            this.adresaDataGridViewTextBoxColumn1,
+            this.strucnaspremaDataGridViewTextBoxColumn1,
+            this.slikaputanjaDataGridViewTextBoxColumn,
+            this.idvrstaulogeDataGridViewTextBoxColumn,
+            this.korisnickoimeDataGridViewTextBoxColumn1,
+            this.lozinkaDataGridViewTextBoxColumn1,
+            this.putanjaDataGridViewTextBoxColumn,
+            this.narudzbenicasDataGridViewTextBoxColumn,
+            this.racunsDataGridViewTextBoxColumn,
+            this.rezervacijasDataGridViewTextBoxColumn,
+            this.vrstaulogeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.zaposlenikBindingSource11;
+            this.dataGridView1.Location = new System.Drawing.Point(551, 362);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(205, 122);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // zaposlenikBindingSource11
+            // 
+            this.zaposlenikBindingSource11.DataSource = typeof(FunctionBarDb.zaposlenik);
+            // 
+            // slikaDataGridViewImageColumn
+            // 
+            this.slikaDataGridViewImageColumn.DataPropertyName = "slika";
+            this.slikaDataGridViewImageColumn.HeaderText = "slika";
+            this.slikaDataGridViewImageColumn.Name = "slikaDataGridViewImageColumn";
+            this.slikaDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // oIBDataGridViewTextBoxColumn1
+            // 
+            this.oIBDataGridViewTextBoxColumn1.DataPropertyName = "OIB";
+            this.oIBDataGridViewTextBoxColumn1.HeaderText = "OIB";
+            this.oIBDataGridViewTextBoxColumn1.Name = "oIBDataGridViewTextBoxColumn1";
+            // 
+            // imeDataGridViewTextBoxColumn1
+            // 
+            this.imeDataGridViewTextBoxColumn1.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn1.HeaderText = "ime";
+            this.imeDataGridViewTextBoxColumn1.Name = "imeDataGridViewTextBoxColumn1";
+            // 
+            // prezimeDataGridViewTextBoxColumn1
+            // 
+            this.prezimeDataGridViewTextBoxColumn1.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn1.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn1.Name = "prezimeDataGridViewTextBoxColumn1";
+            // 
+            // datumrodenjaDataGridViewTextBoxColumn1
+            // 
+            this.datumrodenjaDataGridViewTextBoxColumn1.DataPropertyName = "datum_rodenja";
+            this.datumrodenjaDataGridViewTextBoxColumn1.HeaderText = "datum_rodenja";
+            this.datumrodenjaDataGridViewTextBoxColumn1.Name = "datumrodenjaDataGridViewTextBoxColumn1";
+            // 
+            // adresaDataGridViewTextBoxColumn1
+            // 
+            this.adresaDataGridViewTextBoxColumn1.DataPropertyName = "adresa";
+            this.adresaDataGridViewTextBoxColumn1.HeaderText = "adresa";
+            this.adresaDataGridViewTextBoxColumn1.Name = "adresaDataGridViewTextBoxColumn1";
+            // 
+            // strucnaspremaDataGridViewTextBoxColumn1
+            // 
+            this.strucnaspremaDataGridViewTextBoxColumn1.DataPropertyName = "strucna_sprema";
+            this.strucnaspremaDataGridViewTextBoxColumn1.HeaderText = "strucna_sprema";
+            this.strucnaspremaDataGridViewTextBoxColumn1.Name = "strucnaspremaDataGridViewTextBoxColumn1";
+            // 
+            // slikaputanjaDataGridViewTextBoxColumn
+            // 
+            this.slikaputanjaDataGridViewTextBoxColumn.DataPropertyName = "slika_putanja";
+            this.slikaputanjaDataGridViewTextBoxColumn.HeaderText = "slika_putanja";
+            this.slikaputanjaDataGridViewTextBoxColumn.Name = "slikaputanjaDataGridViewTextBoxColumn";
+            // 
+            // idvrstaulogeDataGridViewTextBoxColumn
+            // 
+            this.idvrstaulogeDataGridViewTextBoxColumn.DataPropertyName = "id_vrsta_uloge";
+            this.idvrstaulogeDataGridViewTextBoxColumn.HeaderText = "id_vrsta_uloge";
+            this.idvrstaulogeDataGridViewTextBoxColumn.Name = "idvrstaulogeDataGridViewTextBoxColumn";
+            // 
+            // korisnickoimeDataGridViewTextBoxColumn1
+            // 
+            this.korisnickoimeDataGridViewTextBoxColumn1.DataPropertyName = "korisnicko_ime";
+            this.korisnickoimeDataGridViewTextBoxColumn1.HeaderText = "korisnicko_ime";
+            this.korisnickoimeDataGridViewTextBoxColumn1.Name = "korisnickoimeDataGridViewTextBoxColumn1";
+            // 
+            // lozinkaDataGridViewTextBoxColumn1
+            // 
+            this.lozinkaDataGridViewTextBoxColumn1.DataPropertyName = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn1.HeaderText = "lozinka";
+            this.lozinkaDataGridViewTextBoxColumn1.Name = "lozinkaDataGridViewTextBoxColumn1";
+            // 
+            // putanjaDataGridViewTextBoxColumn
+            // 
+            this.putanjaDataGridViewTextBoxColumn.DataPropertyName = "putanja";
+            this.putanjaDataGridViewTextBoxColumn.HeaderText = "putanja";
+            this.putanjaDataGridViewTextBoxColumn.Name = "putanjaDataGridViewTextBoxColumn";
+            // 
+            // narudzbenicasDataGridViewTextBoxColumn
+            // 
+            this.narudzbenicasDataGridViewTextBoxColumn.DataPropertyName = "narudzbenicas";
+            this.narudzbenicasDataGridViewTextBoxColumn.HeaderText = "narudzbenicas";
+            this.narudzbenicasDataGridViewTextBoxColumn.Name = "narudzbenicasDataGridViewTextBoxColumn";
+            // 
+            // racunsDataGridViewTextBoxColumn
+            // 
+            this.racunsDataGridViewTextBoxColumn.DataPropertyName = "racuns";
+            this.racunsDataGridViewTextBoxColumn.HeaderText = "racuns";
+            this.racunsDataGridViewTextBoxColumn.Name = "racunsDataGridViewTextBoxColumn";
+            // 
+            // rezervacijasDataGridViewTextBoxColumn
+            // 
+            this.rezervacijasDataGridViewTextBoxColumn.DataPropertyName = "rezervacijas";
+            this.rezervacijasDataGridViewTextBoxColumn.HeaderText = "rezervacijas";
+            this.rezervacijasDataGridViewTextBoxColumn.Name = "rezervacijasDataGridViewTextBoxColumn";
+            // 
+            // vrstaulogeDataGridViewTextBoxColumn
+            // 
+            this.vrstaulogeDataGridViewTextBoxColumn.DataPropertyName = "vrsta_uloge";
+            this.vrstaulogeDataGridViewTextBoxColumn.HeaderText = "vrsta_uloge";
+            this.vrstaulogeDataGridViewTextBoxColumn.Name = "vrstaulogeDataGridViewTextBoxColumn";
+            // 
             // ZaposleniciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1039, 496);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnIzbrisiZaposlenika);
             this.Controls.Add(this.btnUnesiZaposlenika);
             this.Controls.Add(this.btnAzurirajZaposlenika);
@@ -309,6 +459,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,5 +499,23 @@
         private System.Windows.Forms.Button btnIzbrisiZaposlenika;
         private System.Windows.Forms.Button btnUnesiZaposlenika;
         private System.Windows.Forms.Button btnAzurirajZaposlenika;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewImageColumn slikaDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oIBDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datumrodenjaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strucnaspremaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn slikaputanjaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idvrstaulogeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn korisnickoimeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lozinkaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn putanjaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn narudzbenicasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn racunsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rezervacijasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vrstaulogeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource zaposlenikBindingSource11;
     }
 }

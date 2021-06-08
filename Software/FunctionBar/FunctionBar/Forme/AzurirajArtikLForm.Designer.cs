@@ -43,12 +43,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnPovratak = new System.Windows.Forms.Button();
+            this.cbPorez = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.cbPorez);
             this.groupBox1.Controls.Add(this.txtNabavnaCijena);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cbVrstaArtikla);
@@ -63,7 +67,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(26, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(254, 224);
+            this.groupBox1.Size = new System.Drawing.Size(254, 238);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Podaci o artiklu";
@@ -188,6 +192,22 @@
             this.btnPovratak.UseVisualStyleBackColor = false;
             this.btnPovratak.Click += new System.EventHandler(this.btnPovratak_Click);
             // 
+            // cbPorez
+            // 
+            this.cbPorez.FormattingEnabled = true;
+            this.cbPorez.Location = new System.Drawing.Point(91, 211);
+            this.cbPorez.Name = "cbPorez";
+            this.cbPorez.Size = new System.Drawing.Size(124, 21);
+            this.cbPorez.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(6, 214);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 18);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Porez";
+            // 
             // AzurirajArtikLForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,5 +243,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnPovratak;
+        private System.Windows.Forms.ComboBox cbPorez;
+        private System.Windows.Forms.Label label5;
     }
 }

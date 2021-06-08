@@ -44,6 +44,7 @@ namespace FunctionBar.Forme
             using (var context = new FunctionBarDB())
             {
                 context.vrsta_artikla.Attach(vrstaArtikla);
+               
                 return vrstaArtikla.artikls.ToList();
             }
         }
@@ -51,7 +52,16 @@ namespace FunctionBar.Forme
         private void dgvVrstaArtikla_SelectionChanged(object sender, EventArgs e)
         {
             vrsta_artikla odabranaVrsta = dgvVrstaArtikla.CurrentRow.DataBoundItem as vrsta_artikla;
-            dgvArtikl.DataSource = UzmiArtikle(odabranaVrsta);
+            using (var context=new FunctionBarDB())
+            {
+                var query = from artikl in context.artikls
+                            join vrsta in context.vrsta_artikla on artikl.id_vrsta_artikla equals vrsta.ID
+                            where artikl.id_vrsta_artikla ==(int)odabranaVrsta.ID && (artikl.aktivan==true || artikl.aktivan==null)
+                            select artikl;
+                    dgvArtikl.DataSource = query.ToList();
+            }
+           
+          
         }
 
         private void btnUnesiArtikl_Click(object sender, EventArgs e)
@@ -72,8 +82,14 @@ namespace FunctionBar.Forme
             using(var context= new FunctionBarDB())
             {
                 context.artikls.Attach(artikl);
-                context.artikls.Remove(artikl);
-                context.SaveChanges();
+                var query = context.artikls.SingleOrDefault(x => x.ID == artikl.ID);
+                if (query != null)
+                {
+                    query.aktivan = false;
+                    context.SaveChanges();
+                }
+               // context.artikls.Remove(artikl);
+               
             }
             Osvjezi();
         }

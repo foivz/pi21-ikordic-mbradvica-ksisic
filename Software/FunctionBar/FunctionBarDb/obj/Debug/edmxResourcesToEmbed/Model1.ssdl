@@ -12,6 +12,7 @@
     <Property Name="nabavna_cijena" Type="float" />
     <Property Name="id_vrsta_artikla" Type="int" Nullable="false" />
     <Property Name="id_stopa_poreza" Type="int" Nullable="false" />
+    <Property Name="aktivan" Type="bit" />
   </EntityType>
   <EntityType Name="dobavljac">
     <Key>
@@ -152,9 +153,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_artikl_vrsta_artikla">
-    <End Role="vrsta_artikla" Type="Self.vrsta_artikla" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="vrsta_artikla" Type="Self.vrsta_artikla" Multiplicity="1" />
     <End Role="artikl" Type="Self.artikl" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="vrsta_artikla">

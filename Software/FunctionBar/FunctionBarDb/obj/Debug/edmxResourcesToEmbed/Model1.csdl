@@ -16,6 +16,7 @@
     <NavigationProperty Name="vrsta_artikla" Relationship="Self.FK_artikl_vrsta_artikla" FromRole="artikl" ToRole="vrsta_artikla" />
     <NavigationProperty Name="stavka_narudzbe" Relationship="Self.FK_stavka_narudzbe_artikl" FromRole="artikl" ToRole="stavka_narudzbe" />
     <NavigationProperty Name="stavka_racuna" Relationship="Self.FK_stavka_racuna_artikl" FromRole="artikl" ToRole="stavka_racuna" />
+    <Property Name="aktivan" Type="Boolean" />
   </EntityType>
   <EntityType Name="dobavljac">
     <Key>

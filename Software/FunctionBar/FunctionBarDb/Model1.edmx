@@ -17,6 +17,7 @@
           <Property Name="nabavna_cijena" Type="float" />
           <Property Name="id_vrsta_artikla" Type="int" Nullable="false" />
           <Property Name="id_stopa_poreza" Type="int" Nullable="false" />
+          <Property Name="aktivan" Type="bit" />
         </EntityType>
         <EntityType Name="dobavljac">
           <Key>
@@ -157,9 +158,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_artikl_vrsta_artikla">
-          <End Role="vrsta_artikla" Type="Self.vrsta_artikla" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="vrsta_artikla" Type="Self.vrsta_artikla" Multiplicity="1" />
           <End Role="artikl" Type="Self.artikl" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vrsta_artikla">
@@ -425,6 +424,7 @@
           <NavigationProperty Name="vrsta_artikla" Relationship="Self.FK_artikl_vrsta_artikla" FromRole="artikl" ToRole="vrsta_artikla" />
           <NavigationProperty Name="stavka_narudzbe" Relationship="Self.FK_stavka_narudzbe_artikl" FromRole="artikl" ToRole="stavka_narudzbe" />
           <NavigationProperty Name="stavka_racuna" Relationship="Self.FK_stavka_racuna_artikl" FromRole="artikl" ToRole="stavka_racuna" />
+          <Property Name="aktivan" Type="Boolean" />
         </EntityType>
         <EntityType Name="dobavljac">
           <Key>
@@ -850,6 +850,7 @@
           <EntitySetMapping Name="artikls">
             <EntityTypeMapping TypeName="FBarDB.artikl">
               <MappingFragment StoreEntitySet="artikl">
+                <ScalarProperty Name="aktivan" ColumnName="aktivan" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="cijena" ColumnName="cijena" />
