@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbFiltrirajRacune = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviRacuni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeRacuna)).BeginInit();
             this.SuspendLayout();
@@ -95,12 +96,23 @@
             this.cbFiltrirajRacune.TabIndex = 5;
             this.cbFiltrirajRacune.SelectedIndexChanged += new System.EventHandler(this.cbFiltrirajRacune_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(271, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Filtriraj";
+            // 
             // RacuniForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1076, 648);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cbFiltrirajRacune);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbFiltrirajRacune;
+        private System.Windows.Forms.Label label3;
     }
 }
