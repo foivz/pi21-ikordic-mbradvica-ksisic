@@ -108,6 +108,7 @@ namespace FunctionBar.Forme
             
         }
 
+        //povećava se količina artikla za kucanje
         private void btnPlus_Click(object sender, EventArgs e)
         {
             labelKolicina.Text = (int.Parse(labelKolicina.Text) + 1).ToString();
@@ -118,12 +119,14 @@ namespace FunctionBar.Forme
 
         }
 
+        //smanjuje se količina artikla za kucanje
         private void btnMinus_Click(object sender, EventArgs e)
         {
             ProvjeriMinus();
             labelKolicina.Text = (int.Parse(labelKolicina.Text) -1).ToString();
         }
 
+        //ukoliko je vrijednost za kucanje manja od 0, vraća se na 1
         private void ProvjeriMinus()
         {
             if (int.Parse(labelKolicina.Text) <= 0)
@@ -141,6 +144,7 @@ namespace FunctionBar.Forme
             UkupnaSuma();
         }
 
+        //računanje iznosa
         private void Iznos()
         {
            foreach(DataGridViewRow red in dgvZaKucanje.Rows)
@@ -150,6 +154,7 @@ namespace FunctionBar.Forme
             }
         }
 
+        //racunanje ukupne sume računa
         private void UkupnaSuma()
         {
             txtSuma.Text = "0";
@@ -165,6 +170,8 @@ namespace FunctionBar.Forme
             labelKolicina.Text = "1";
         }
 
+        //postavljaju se stupci u dgvZaKucanje potrebni za izradu računa
+        //podaci se uzimaju iz dgvArtikli
         private void ArtikliZaRacun()
         {
             dgvZaKucanje.ColumnCount = 5;
@@ -180,6 +187,7 @@ namespace FunctionBar.Forme
             dgvZaKucanje.Rows.Add(dodajRed);        
         }
 
+        //provjera da količina bude veća od 0
         private void handleKolicina()
         {
             int red = 0;
@@ -194,6 +202,7 @@ namespace FunctionBar.Forme
             }
         }
 
+        //uklanjanje artikla s liste za izradu računa na temelju index-a
         private void btnUkloniArtikl_Click(object sender, EventArgs e)
         {
             try
@@ -212,6 +221,9 @@ namespace FunctionBar.Forme
             }
         }
 
+        //izrađuje se  novi račun
+        //datum se postavlja na trenutni, a zaposlenik koji je izradio se dohvaća iz statičke klase UpravljanjeRačunima 
+        //gdje metoda VratiTrenutniOIB vraća OIB prijavljenog zaposlenika
         private void btnIspisiRacun_Click(object sender, EventArgs e)
         {
             using (var context=new FunctionBarDB())

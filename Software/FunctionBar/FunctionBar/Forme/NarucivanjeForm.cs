@@ -49,6 +49,7 @@ namespace FunctionBar.Forme
             PopuniPodatke();
         }
 
+        //pune se podaci o dobavljaču na temelju odabranog u comboBoxu
         private void PopuniPodatke()
         {
             dobavljac dobavljac = cbNaziv.SelectedItem as dobavljac;
@@ -76,6 +77,7 @@ namespace FunctionBar.Forme
 
         }
 
+        //miču se sve kontrole s panela
         private void UkloniKontrole()
         {
             var uc = uxArtikliKoličina.Controls.OfType<NaruciArtikl>().ToList();
