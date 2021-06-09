@@ -41,6 +41,7 @@
     <EntitySetMapping Name="racuns">
       <EntityTypeMapping TypeName="FBarDB.racun">
         <MappingFragment StoreEntitySet="racun">
+          <ScalarProperty Name="storniran" ColumnName="storniran" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="datum" ColumnName="datum" />
           <ScalarProperty Name="id_zaposlenik" ColumnName="id_zaposlenik" />

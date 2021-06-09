@@ -41,6 +41,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="datum" Type="datetime" Nullable="false" />
     <Property Name="id_zaposlenik" Type="bigint" Nullable="false" />
+    <Property Name="storniran" Type="bit" />
   </EntityType>
   <EntityType Name="rezervacija">
     <Key>

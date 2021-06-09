@@ -219,7 +219,7 @@ namespace FunctionBar.Forme
                 racun racun = new racun
                 {
                     datum = DateTime.Now,
-                    id_zaposlenik = 45127894124
+                    id_zaposlenik = UpravljanjeRačunima.VratiTrenutniOIB()
                 };
                 context.racuns.Add(racun);
                 context.SaveChanges();

@@ -15,45 +15,86 @@ namespace FunctionBar.Forme
         public RacuniForm()
         {
             InitializeComponent();
+       
         }
 
         private void RacuniForm_Load(object sender, EventArgs e)
         {
-            Osvjezi();
+            if (UpravljanjeRačunima.VratiTrenutnuUlogu() == 2)
+            {
+                btnStorniraj.Visible = false;
+            }
+            Osvjezi(0);
+            cbFiltrirajRacune.Items.Add("Aktivni");
+            cbFiltrirajRacune.Items.Add("Stornirani");
+            cbFiltrirajRacune.SelectedIndex = 0;
         }
 
-        private void Osvjezi()
+        private void Osvjezi(int index)
         {
             dgvSviRacuni.DataSource = null;
-            PrikaziRacune();
+            PrikaziRacune(index);
         }
 
-        private void PrikaziRacune()
+
+        //prikaz svih računa, grupira se po ID-u
+        private void PrikaziRacune(int index)
         {
             using (var context = new FunctionBarDB())
             {
-                var upit = from racun in context.racuns
-                           join zaposlenik in context.zaposleniks on racun.id_zaposlenik equals zaposlenik.OIB
-                           join stavka_racuna in context.stavka_racuna on racun.ID equals stavka_racuna.id_racun
-                           join artikl in context.artikls on stavka_racuna.id_artikl equals artikl.ID
-                           select new
-                           {
-                               racun.ID,
-                               racun.datum,
-                               zaposlenik.ime, zaposlenik.prezime
-                           } into x
-                           group x by x.ID into g
-                           select new
-                           {
-                               Id = g.Key,
-                               Datum = g.Select(x => x.datum).FirstOrDefault(),
-                               Ime = g.Select(x => x.ime + " " + x.prezime).FirstOrDefault()
-                           };
+                if (index==0)
+                {
+                    var upit = from racun in context.racuns
+                               join zaposlenik in context.zaposleniks on racun.id_zaposlenik equals zaposlenik.OIB
+                               join stavka_racuna in context.stavka_racuna on racun.ID equals stavka_racuna.id_racun
+                               join artikl in context.artikls on stavka_racuna.id_artikl equals artikl.ID
+                               where racun.storniran == false || racun.storniran == null
+                               select new
+                               {
+                                   racun.ID,
+                                   racun.datum,
+                                   zaposlenik.ime,
+                                   zaposlenik.prezime
+                               } into x
+                               group x by x.ID into g
+                               select new
+                               {
+                                   Id = g.Key,
+                                   Datum = g.Select(x => x.datum).FirstOrDefault(),
+                                   Ime = g.Select(x => x.ime + " " + x.prezime).FirstOrDefault()
+                               };
 
-                dgvSviRacuni.DataSource = upit.ToList();
+                    dgvSviRacuni.DataSource = upit.ToList();
+                }
+                else
+                {
+                    var upit = from racun in context.racuns
+                               join zaposlenik in context.zaposleniks on racun.id_zaposlenik equals zaposlenik.OIB
+                               join stavka_racuna in context.stavka_racuna on racun.ID equals stavka_racuna.id_racun
+                               join artikl in context.artikls on stavka_racuna.id_artikl equals artikl.ID
+                               where racun.storniran ==true
+                               select new
+                               {
+                                   racun.ID,
+                                   racun.datum,
+                                   zaposlenik.ime,
+                                   zaposlenik.prezime
+                               } into x
+                               group x by x.ID into g
+                               select new
+                               {
+                                   Id = g.Key,
+                                   Datum = g.Select(x => x.datum).FirstOrDefault(),
+                                   Ime = g.Select(x => x.ime + " " + x.prezime).FirstOrDefault()
+                               };
+
+                    dgvSviRacuni.DataSource = upit.ToList();
+                }
+        
                          }
         }
 
+        //metoda za dohvaćanje stavki računa na temelju id-a računa
         private void DohvatiStavkeRacuna(int id)
         {
             using (var context=new FunctionBarDB())
@@ -72,6 +113,7 @@ namespace FunctionBar.Forme
             }
         }
 
+        //ID računa je prva ćelija u dgvSviRacuni te se prema njoj dohvaćaju stavke tog računa
         private void dgvSviRacuni_SelectionChanged(object sender, EventArgs e)
         {
             var index = dgvSviRacuni.CurrentRow.Cells[0].Value;
@@ -124,7 +166,8 @@ namespace FunctionBar.Forme
 
                 foreach (racun item in query)
                 {
-                    context.racuns.Remove(item);
+                    item.storniran = true;
+                    
 
                 }
 
@@ -136,7 +179,33 @@ namespace FunctionBar.Forme
 
 
             }
-            Osvjezi();
+            Osvjezi(0);
+        }
+
+        private void cbFiltrirajRacune_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbFiltrirajRacune.SelectedIndex)
+            {
+                case 0:
+                    if(UpravljanjeRačunima.VratiTrenutnuUlogu()==2)
+                    {
+                        btnStorniraj.Visible = false;
+                        dgvSviRacuni.DataSource = null;
+                        Osvjezi(0);
+                    }
+                    else
+                    {
+                        btnStorniraj.Visible = true;
+                        dgvSviRacuni.DataSource = null;
+                        Osvjezi(0);
+                    }               
+                    break;
+                case 1:
+                    btnStorniraj.Visible = false;
+                    dgvSviRacuni.DataSource = null;
+                    Osvjezi(1);
+                    break;
+            }
         }
     }
 }

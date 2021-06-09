@@ -93,7 +93,7 @@ namespace FunctionBar.Forme
                 narudzbenica narudzbenica = new narudzbenica
                 {
                     datum_narudzbe = DateTime.Today,
-                    id_zaposlenik = 87854120007,
+                    id_zaposlenik = UpravljanjeRačunima.VratiTrenutniOIB(),
                     id_dobavljac = Convert.ToInt32(txtOIB.Text),
                 };
                 context.narudzbenicas.Add(narudzbenica);

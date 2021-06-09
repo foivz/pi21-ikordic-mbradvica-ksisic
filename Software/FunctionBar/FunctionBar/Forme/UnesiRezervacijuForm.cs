@@ -43,23 +43,31 @@ namespace FunctionBar.Forme
         {
             using (var context=new FunctionBarDB())
             {
-                string ime = txtIme.Text;
-                string prezime = txtPrezime.Text;
-                string kontakt = txtKontakt.Text;
-                stol stol = cbStol.SelectedItem as stol;
-                context.stols.Attach(stol);
-                rezervacija novaRezervacija = new rezervacija
+                try
                 {
-                    Ime = ime,
-                    Prezime = prezime,
-                    Kontakt = kontakt,
-                    datum_rezervacije = dtPicker.Value,
-                    datum_zaprimanja = DateTime.Now,
-                    stol = stol,
-                    id_zaposlenik= 45127894124
-                };
-                context.rezervacijas.Add(novaRezervacija);
-                context.SaveChanges();
+                    string ime = txtIme.Text;
+                    string prezime = txtPrezime.Text;
+                    string kontakt = txtKontakt.Text;
+                    stol stol = cbStol.SelectedItem as stol;
+                    context.stols.Attach(stol);
+                    rezervacija novaRezervacija = new rezervacija
+                    {
+                        Ime = ime,
+                        Prezime = prezime,
+                        Kontakt = kontakt,
+                        datum_rezervacije = dtPicker.Value,
+                        datum_zaprimanja = DateTime.Now,
+                        stol = stol,
+                        id_zaposlenik = UpravljanjeRačunima.VratiTrenutniOIB()
+                    };
+                    context.rezervacijas.Add(novaRezervacija);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Molimo unesite ispravne podatke!");
+                }
+         
             }
             this.Close();
         }

@@ -51,6 +51,7 @@
     <Property Name="id_zaposlenik" Type="Int64" Nullable="false" />
     <NavigationProperty Name="zaposlenik" Relationship="Self.FK_racun_zaposlenik" FromRole="racun" ToRole="zaposlenik" />
     <NavigationProperty Name="stavka_racuna" Relationship="Self.FK_stavka_racuna_racun" FromRole="racun" ToRole="stavka_racuna" />
+    <Property Name="storniran" Type="Boolean" />
   </EntityType>
   <EntityType Name="rezervacija">
     <Key>

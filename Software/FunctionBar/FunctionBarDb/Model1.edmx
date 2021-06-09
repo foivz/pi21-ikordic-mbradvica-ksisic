@@ -46,6 +46,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="datum" Type="datetime" Nullable="false" />
           <Property Name="id_zaposlenik" Type="bigint" Nullable="false" />
+          <Property Name="storniran" Type="bit" />
         </EntityType>
         <EntityType Name="rezervacija">
           <Key>
@@ -459,6 +460,7 @@
           <Property Name="id_zaposlenik" Type="Int64" Nullable="false" />
           <NavigationProperty Name="zaposlenik" Relationship="Self.FK_racun_zaposlenik" FromRole="racun" ToRole="zaposlenik" />
           <NavigationProperty Name="stavka_racuna" Relationship="Self.FK_stavka_racuna_racun" FromRole="racun" ToRole="stavka_racuna" />
+          <Property Name="storniran" Type="Boolean" />
         </EntityType>
         <EntityType Name="rezervacija">
           <Key>
@@ -887,6 +889,7 @@
           <EntitySetMapping Name="racuns">
             <EntityTypeMapping TypeName="FBarDB.racun">
               <MappingFragment StoreEntitySet="racun">
+                <ScalarProperty Name="storniran" ColumnName="storniran" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="datum" ColumnName="datum" />
                 <ScalarProperty Name="id_zaposlenik" ColumnName="id_zaposlenik" />

@@ -170,6 +170,7 @@
             this.Controls.Add(this.cbStol);
             this.Controls.Add(this.label1);
             this.Name = "AzurirajRezervaciju";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AzurirajRezervaciju";
             this.Load += new System.EventHandler(this.AzurirajRezervaciju_Load);
             this.ResumeLayout(false);

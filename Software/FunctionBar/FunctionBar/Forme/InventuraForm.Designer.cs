@@ -45,7 +45,7 @@
             this.uxArtikli.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.uxArtikli.Location = new System.Drawing.Point(23, 12);
             this.uxArtikli.Name = "uxArtikli";
-            this.uxArtikli.Size = new System.Drawing.Size(901, 385);
+            this.uxArtikli.Size = new System.Drawing.Size(855, 355);
             this.uxArtikli.TabIndex = 1;
             this.uxArtikli.Click += new System.EventHandler(this.uxArtikli_Click);
             this.uxArtikli.MouseDown += new System.Windows.Forms.MouseEventHandler(this.uxArtikli_MouseDown);
