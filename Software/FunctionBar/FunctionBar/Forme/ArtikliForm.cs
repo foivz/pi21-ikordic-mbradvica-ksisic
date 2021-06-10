@@ -19,6 +19,12 @@ namespace FunctionBar.Forme
 
         private void ArtikliForm_Load(object sender, EventArgs e)
         {
+            if (UpravljanjeRačunima.VratiTrenutnuUlogu() == 2)
+            {
+                btnAzurirajArtikl.Visible = false;
+                btnIzbrisiArtikl.Visible = false;
+                btnUnesiArtikl.Visible = false;
+            }
             Osvjezi();
         }
 

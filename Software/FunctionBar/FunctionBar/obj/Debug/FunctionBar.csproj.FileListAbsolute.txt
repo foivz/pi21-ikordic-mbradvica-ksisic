@@ -95,3 +95,4 @@ B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\F
 B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.Forme.AzurirajRezervaciju.resources
 B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.UC.Inventura.resources
 B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.Forme.PrijavaForm.resources
+B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.Forme.StatistikaForm.resources

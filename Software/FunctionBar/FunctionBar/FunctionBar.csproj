@@ -113,6 +113,12 @@
     <Compile Include="Forme\RacuniForm.Designer.cs">
       <DependentUpon>RacuniForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\StatistikaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\StatistikaForm.Designer.cs">
+      <DependentUpon>StatistikaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\UnesiRezervacijuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\RacuniForm.resx">
       <DependentUpon>RacuniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\StatistikaForm.resx">
+      <DependentUpon>StatistikaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\UnesiRezervacijuForm.resx">
       <DependentUpon>UnesiRezervacijuForm.cs</DependentUpon>
