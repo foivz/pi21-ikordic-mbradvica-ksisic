@@ -158,6 +158,8 @@ namespace FunctionBar.Forme
             }
         }
 
+        //racuna tjednu zaradu 
+        //usporeduje datum prije 30 dana u ponoc i sutrasnji datum u ponoc te uzima sve racune koji su izdani izmedu ta dva datuma
         private void MjesecnaZarada()
         {
             var prijeMjesecDana = DateTime.Now.Date.AddDays(-30);
@@ -184,6 +186,8 @@ namespace FunctionBar.Forme
             }
         }
 
+        //racuna tjednu zaradu 
+        //usporeduje datum prije 7 dana u ponoc i sutrasnji datum u ponoc te uzima sve racune koji su izdani izmedu ta dva datuma
         private void TjednaZarada()
         {
             var prijeTjedanDana = DateTime.Now.Date.AddDays(-7);
