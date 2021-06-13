@@ -32,6 +32,7 @@
             this.uxKoličina = new System.Windows.Forms.TextBox();
             this.uxArtikl = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnIzbrisi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -67,11 +68,23 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Artikl";
             // 
+            // btnIzbrisi
+            // 
+            this.btnIzbrisi.BackColor = System.Drawing.Color.Red;
+            this.btnIzbrisi.Location = new System.Drawing.Point(271, 40);
+            this.btnIzbrisi.Name = "btnIzbrisi";
+            this.btnIzbrisi.Size = new System.Drawing.Size(32, 21);
+            this.btnIzbrisi.TabIndex = 8;
+            this.btnIzbrisi.Text = "X";
+            this.btnIzbrisi.UseVisualStyleBackColor = false;
+            this.btnIzbrisi.Click += new System.EventHandler(this.btnIzbrisi_Click);
+            // 
             // NaruciArtikl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Controls.Add(this.btnIzbrisi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.uxKoličina);
@@ -90,5 +103,6 @@
         private System.Windows.Forms.TextBox uxKoličina;
         private System.Windows.Forms.ComboBox uxArtikl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnIzbrisi;
     }
 }

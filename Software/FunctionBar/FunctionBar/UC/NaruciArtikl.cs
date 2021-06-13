@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FunctionBarDb;
+using FunctionBar.Forme;
+
 namespace FunctionBar.UC
 {
     public partial class NaruciArtikl : UserControl
     {
         private List<artikl> artikliCombo = null;
-        public NaruciArtikl(List<artikl> artikli)
+        private NarucivanjeForm frm = null;
+        public NaruciArtikl(List<artikl> artikli, NarucivanjeForm narucivanjeForma)
         {
             artikliCombo = artikli;
+            frm = narucivanjeForma;
             InitializeComponent();
         }
 
@@ -41,6 +45,11 @@ namespace FunctionBar.UC
         {
             int kolicina = int.Parse(uxKoličina.Text);
             return kolicina;
+        }
+
+        private void btnIzbrisi_Click(object sender, EventArgs e)
+        {
+            frm.IzbrisiUC(this);
         }
     }
 }

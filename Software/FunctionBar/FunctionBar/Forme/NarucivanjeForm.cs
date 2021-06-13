@@ -65,10 +65,15 @@ namespace FunctionBar.Forme
         {
 
         }
+        public void IzbrisiUC(NaruciArtikl control)
+        {
+            uxArtikliKoličina.Controls.Remove(control);
+            control.Dispose();
+        }
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            uxArtikliKoličina.Controls.Add(new NaruciArtikl(artikli));
+            uxArtikliKoličina.Controls.Add(new NaruciArtikl(artikli,this));
         }
 
         private void btnUkloniSve_Click(object sender, EventArgs e)
@@ -90,6 +95,7 @@ namespace FunctionBar.Forme
 
         private void btnNaruci_Click(object sender, EventArgs e)
         {
+            int brojac = 0;
             using (var context=new FunctionBarDB())
             {
                 narudzbenica narudzbenica = new narudzbenica
@@ -105,6 +111,7 @@ namespace FunctionBar.Forme
                 {
                     foreach(NaruciArtikl item in uxArtikliKoličina.Controls)
                     {
+                        brojac++;
                         string nazivArtikla = item.IdArtikla();
                         var query = from artikl in context.artikls.Where(x => x.naziv.StartsWith(nazivArtikla) && x.naziv.EndsWith(nazivArtikla))
                                     select artikl;
@@ -117,11 +124,16 @@ namespace FunctionBar.Forme
                             kolicina = item.KolicinaArtikla()
                         };
                         context.stavka_narudzbe.Add(stavke);
+                    }                                
+                    if (brojac == 0)
+                    {
+                        MessageBox.Show("Unesite barem jedan artikl!");
                     }
-                    context.SaveChanges();
-                    MessageBox.Show("Uspješno naručena roba!");
-                    
-
+                    else
+                    {
+                         MessageBox.Show("Uspješno naručena roba!");
+                        context.SaveChanges();
+                    }
                 }
 
                 catch 

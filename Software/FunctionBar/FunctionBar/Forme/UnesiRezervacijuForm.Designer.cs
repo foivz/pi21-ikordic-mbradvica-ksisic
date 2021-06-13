@@ -171,6 +171,7 @@
             this.Controls.Add(this.cbStol);
             this.Controls.Add(this.label1);
             this.Name = "UnesiRezervacijuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UnesiRezervacijuForm";
             this.Load += new System.EventHandler(this.UnesiRezervacijuForm_Load);
             this.ResumeLayout(false);

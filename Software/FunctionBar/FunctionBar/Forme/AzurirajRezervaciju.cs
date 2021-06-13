@@ -80,5 +80,10 @@ namespace FunctionBar.Forme
             }
             this.Close();
         }
+
+        private void btnPovratak_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
