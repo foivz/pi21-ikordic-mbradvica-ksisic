@@ -174,6 +174,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UnesiRezervacijuForm";
             this.Load += new System.EventHandler(this.UnesiRezervacijuForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.UnesiRezervacijuForm_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

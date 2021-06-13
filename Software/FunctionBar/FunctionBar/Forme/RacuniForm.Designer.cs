@@ -122,6 +122,7 @@
             this.Name = "RacuniForm";
             this.Text = "RacuniForm";
             this.Load += new System.EventHandler(this.RacuniForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.RacuniForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviRacuni)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeRacuna)).EndInit();
             this.ResumeLayout(false);

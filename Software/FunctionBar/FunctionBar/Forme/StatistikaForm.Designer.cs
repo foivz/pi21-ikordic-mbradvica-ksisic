@@ -298,6 +298,7 @@
             this.Name = "StatistikaForm";
             this.Text = "StatistikaForm";
             this.Load += new System.EventHandler(this.StatistikaForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.StatistikaForm_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vrstePicaGraf)).EndInit();

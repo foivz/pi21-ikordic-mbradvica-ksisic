@@ -147,5 +147,11 @@ namespace FunctionBar.Forme
             UkloniKontrole();
 
         }
+
+        private void NarucivanjeForm_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string helpPoveznica = "FunctionBarHelp.chm";
+            Help.ShowHelp(this, Environment.CurrentDirectory + "\\Resources\\" + helpPoveznica, HelpNavigator.Topic, "start.htm#_Toc43663407");
+        }
     }
 }

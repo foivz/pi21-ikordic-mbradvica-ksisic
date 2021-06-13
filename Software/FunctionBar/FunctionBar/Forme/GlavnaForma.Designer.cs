@@ -51,6 +51,7 @@
             this.uxAktivnaForma.Name = "uxAktivnaForma";
             this.uxAktivnaForma.Size = new System.Drawing.Size(1257, 483);
             this.uxAktivnaForma.TabIndex = 2;
+            this.uxAktivnaForma.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.uxAktivnaForma_HelpRequested);
             this.uxAktivnaForma.Paint += new System.Windows.Forms.PaintEventHandler(this.uxAktivnaForma_Paint);
             // 
             // tableLayoutPanel1

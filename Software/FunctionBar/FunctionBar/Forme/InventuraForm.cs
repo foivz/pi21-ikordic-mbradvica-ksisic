@@ -97,5 +97,11 @@ namespace FunctionBar.Forme
 
             }
         }
+
+        private void InventuraForm_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string helpPoveznica = "FunctionBarHelp.chm";
+            Help.ShowHelp(this, Environment.CurrentDirectory + "\\Resources\\" + helpPoveznica, HelpNavigator.Topic, "start.htm#_Toc43663414");
+        }
     }
 }

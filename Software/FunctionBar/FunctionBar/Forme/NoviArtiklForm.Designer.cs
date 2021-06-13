@@ -222,6 +222,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NoviArtiklForm";
             this.Load += new System.EventHandler(this.NoviArtiklForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NoviArtiklForm_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

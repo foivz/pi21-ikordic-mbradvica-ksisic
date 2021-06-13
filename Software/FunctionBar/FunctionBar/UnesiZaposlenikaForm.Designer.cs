@@ -258,6 +258,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UnesiZaposlenikaForm";
             this.Load += new System.EventHandler(this.UnesiZaposlenikaForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.UnesiZaposlenikaForm_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

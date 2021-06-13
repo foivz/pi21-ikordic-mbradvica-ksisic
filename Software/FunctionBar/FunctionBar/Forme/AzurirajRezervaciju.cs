@@ -85,5 +85,11 @@ namespace FunctionBar.Forme
         {
             this.Close();
         }
+
+        private void AzurirajRezervaciju_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            string helpPoveznica = "FunctionBarHelp.chm";
+            Help.ShowHelp(this, Environment.CurrentDirectory + "\\Resources\\" + helpPoveznica, HelpNavigator.Topic, "start.htm#_Toc43663412");
+        }
     }
 }

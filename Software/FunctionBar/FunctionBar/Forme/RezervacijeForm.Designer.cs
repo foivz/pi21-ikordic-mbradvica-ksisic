@@ -33,9 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dgvRezervacije = new System.Windows.Forms.DataGridView();
-            this.rezervacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._PI21_19_DBDataSet5 = new FunctionBar._PI21_19_DBDataSet5();
-            this.rezervacijaTableAdapter = new FunctionBar._PI21_19_DBDataSet5TableAdapters.rezervacijaTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumzaprimanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumrezervacijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +40,9 @@
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kontaktDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rezervacijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._PI21_19_DBDataSet5 = new FunctionBar._PI21_19_DBDataSet5();
+            this.rezervacijaTableAdapter = new FunctionBar._PI21_19_DBDataSet5TableAdapters.rezervacijaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet5)).BeginInit();
@@ -100,20 +100,6 @@
             this.dgvRezervacije.TabIndex = 7;
             this.dgvRezervacije.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRezervacije_CellContentClick);
             // 
-            // rezervacijaBindingSource
-            // 
-            this.rezervacijaBindingSource.DataMember = "rezervacija";
-            this.rezervacijaBindingSource.DataSource = this._PI21_19_DBDataSet5;
-            // 
-            // _PI21_19_DBDataSet5
-            // 
-            this._PI21_19_DBDataSet5.DataSetName = "_PI21_19_DBDataSet5";
-            this._PI21_19_DBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rezervacijaTableAdapter
-            // 
-            this.rezervacijaTableAdapter.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -157,6 +143,20 @@
             this.kontaktDataGridViewTextBoxColumn.HeaderText = "Kontakt";
             this.kontaktDataGridViewTextBoxColumn.Name = "kontaktDataGridViewTextBoxColumn";
             // 
+            // rezervacijaBindingSource
+            // 
+            this.rezervacijaBindingSource.DataMember = "rezervacija";
+            this.rezervacijaBindingSource.DataSource = this._PI21_19_DBDataSet5;
+            // 
+            // _PI21_19_DBDataSet5
+            // 
+            this._PI21_19_DBDataSet5.DataSetName = "_PI21_19_DBDataSet5";
+            this._PI21_19_DBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rezervacijaTableAdapter
+            // 
+            this.rezervacijaTableAdapter.ClearBeforeFill = true;
+            // 
             // RezervacijeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +170,7 @@
             this.Name = "RezervacijeForm";
             this.Text = "RezervacijeForm";
             this.Load += new System.EventHandler(this.RezervacijeForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.RezervacijeForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet5)).EndInit();

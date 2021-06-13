@@ -174,6 +174,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AzurirajRezervaciju";
             this.Load += new System.EventHandler(this.AzurirajRezervaciju_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.AzurirajRezervaciju_HelpRequested);
             this.ResumeLayout(false);
             this.PerformLayout();
 

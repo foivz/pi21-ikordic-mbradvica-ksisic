@@ -221,6 +221,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AzurirajArtikLForm";
             this.Load += new System.EventHandler(this.AzurirajArtikLForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.AzurirajArtikLForm_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

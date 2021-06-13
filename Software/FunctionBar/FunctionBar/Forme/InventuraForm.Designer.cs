@@ -45,7 +45,7 @@
             this.uxArtikli.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.uxArtikli.Location = new System.Drawing.Point(23, 12);
             this.uxArtikli.Name = "uxArtikli";
-            this.uxArtikli.Size = new System.Drawing.Size(855, 355);
+            this.uxArtikli.Size = new System.Drawing.Size(889, 133);
             this.uxArtikli.TabIndex = 1;
             this.uxArtikli.Click += new System.EventHandler(this.uxArtikli_Click);
             this.uxArtikli.MouseDown += new System.Windows.Forms.MouseEventHandler(this.uxArtikli_MouseDown);
@@ -53,7 +53,7 @@
             // btnDodaj
             // 
             this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodaj.Location = new System.Drawing.Point(23, 440);
+            this.btnDodaj.Location = new System.Drawing.Point(16, 572);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(118, 34);
             this.btnDodaj.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.btnIzbrisi.BackColor = System.Drawing.Color.Firebrick;
             this.btnIzbrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzbrisi.Location = new System.Drawing.Point(412, 440);
+            this.btnIzbrisi.Location = new System.Drawing.Point(403, 572);
             this.btnIzbrisi.Name = "btnIzbrisi";
             this.btnIzbrisi.Size = new System.Drawing.Size(131, 34);
             this.btnIzbrisi.TabIndex = 3;
@@ -76,7 +76,7 @@
             // btnAzuriraj
             // 
             this.btnAzuriraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAzuriraj.Location = new System.Drawing.Point(788, 440);
+            this.btnAzuriraj.Location = new System.Drawing.Point(777, 572);
             this.btnAzuriraj.Name = "btnAzuriraj";
             this.btnAzuriraj.Size = new System.Drawing.Size(136, 34);
             this.btnAzuriraj.TabIndex = 4;
@@ -89,13 +89,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(958, 514);
+            this.ClientSize = new System.Drawing.Size(942, 633);
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.btnIzbrisi);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.uxArtikli);
             this.Name = "InventuraForm";
             this.Text = "InventuraForm";
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.InventuraForm_HelpRequested);
             this.ResumeLayout(false);
 
         }

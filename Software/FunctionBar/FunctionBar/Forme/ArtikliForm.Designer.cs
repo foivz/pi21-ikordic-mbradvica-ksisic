@@ -400,6 +400,7 @@
             this.Name = "ArtikliForm";
             this.Text = "ArtikliForm";
             this.Load += new System.EventHandler(this.ArtikliForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ArtikliForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this._PI21_19_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vrstaartiklaBindingSource1)).EndInit();

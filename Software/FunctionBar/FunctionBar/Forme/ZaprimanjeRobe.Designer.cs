@@ -123,6 +123,7 @@
             this.Name = "ZaprimanjeRobe";
             this.Text = "NarudzbeniceForm";
             this.Load += new System.EventHandler(this.ZaprimanjeRobe_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ZaprimanjeRobe_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbenice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).EndInit();
             this.ResumeLayout(false);

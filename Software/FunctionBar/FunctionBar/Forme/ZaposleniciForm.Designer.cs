@@ -295,6 +295,7 @@
             this.Name = "ZaposleniciForm";
             this.Text = "Zaposlenici";
             this.Load += new System.EventHandler(this.Zaposlenici_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ZaposleniciForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposlenikBindingSource2)).EndInit();

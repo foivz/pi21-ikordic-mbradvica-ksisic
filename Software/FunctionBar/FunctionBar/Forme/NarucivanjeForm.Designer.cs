@@ -210,6 +210,7 @@
             this.Name = "NarucivanjeForm";
             this.Text = "NarucivanjeForm";
             this.Load += new System.EventHandler(this.NarucivanjeForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NarucivanjeForm_HelpRequested);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

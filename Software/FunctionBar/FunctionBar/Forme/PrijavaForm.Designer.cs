@@ -147,6 +147,7 @@
             this.Name = "PrijavaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.PrijavaForm_Load);
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.PrijavaForm_HelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
