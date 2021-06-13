@@ -219,6 +219,7 @@
             this.Controls.Add(this.btnPovratak);
             this.Controls.Add(this.groupBox1);
             this.Name = "NoviArtiklForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NoviArtiklForm";
             this.Load += new System.EventHandler(this.NoviArtiklForm_Load);
             this.groupBox1.ResumeLayout(false);

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtDatum = new System.Windows.Forms.DateTimePicker();
+            this.cbUloga = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtSprema = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtLozinka = new System.Windows.Forms.TextBox();
@@ -46,9 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnPovratak = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbUloga = new System.Windows.Forms.ComboBox();
-            this.dtDatum = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,29 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Zaposlenik";
+            // 
+            // dtDatum
+            // 
+            this.dtDatum.Location = new System.Drawing.Point(91, 122);
+            this.dtDatum.Name = "dtDatum";
+            this.dtDatum.Size = new System.Drawing.Size(143, 20);
+            this.dtDatum.TabIndex = 20;
+            // 
+            // cbUloga
+            // 
+            this.cbUloga.FormattingEnabled = true;
+            this.cbUloga.Location = new System.Drawing.Point(91, 280);
+            this.cbUloga.Name = "cbUloga";
+            this.cbUloga.Size = new System.Drawing.Size(121, 21);
+            this.cbUloga.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(7, 280);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Uloga";
             // 
             // txtSprema
             // 
@@ -222,29 +245,6 @@
             this.btnPovratak.UseVisualStyleBackColor = false;
             this.btnPovratak.Click += new System.EventHandler(this.btnPovratak_Click);
             // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(7, 280);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 16);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Uloga";
-            // 
-            // cbUloga
-            // 
-            this.cbUloga.FormattingEnabled = true;
-            this.cbUloga.Location = new System.Drawing.Point(91, 280);
-            this.cbUloga.Name = "cbUloga";
-            this.cbUloga.Size = new System.Drawing.Size(121, 21);
-            this.cbUloga.TabIndex = 19;
-            // 
-            // dtDatum
-            // 
-            this.dtDatum.Location = new System.Drawing.Point(91, 122);
-            this.dtDatum.Name = "dtDatum";
-            this.dtDatum.Size = new System.Drawing.Size(143, 20);
-            this.dtDatum.TabIndex = 20;
-            // 
             // UnesiZaposlenikaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +255,7 @@
             this.Controls.Add(this.btnPovratak);
             this.Controls.Add(this.groupBox1);
             this.Name = "UnesiZaposlenikaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UnesiZaposlenikaForm";
             this.Load += new System.EventHandler(this.UnesiZaposlenikaForm_Load);
             this.groupBox1.ResumeLayout(false);

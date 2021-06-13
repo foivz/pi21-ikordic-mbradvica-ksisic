@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbPorez = new System.Windows.Forms.ComboBox();
             this.txtNabavnaCijena = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbVrstaArtikla = new System.Windows.Forms.ComboBox();
@@ -43,8 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnPovratak = new System.Windows.Forms.Button();
-            this.cbPorez = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,22 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Podaci o artiklu";
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(6, 214);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 18);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Porez";
+            // 
+            // cbPorez
+            // 
+            this.cbPorez.FormattingEnabled = true;
+            this.cbPorez.Location = new System.Drawing.Point(91, 211);
+            this.cbPorez.Name = "cbPorez";
+            this.cbPorez.Size = new System.Drawing.Size(124, 21);
+            this.cbPorez.TabIndex = 14;
             // 
             // txtNabavnaCijena
             // 
@@ -192,22 +208,6 @@
             this.btnPovratak.UseVisualStyleBackColor = false;
             this.btnPovratak.Click += new System.EventHandler(this.btnPovratak_Click);
             // 
-            // cbPorez
-            // 
-            this.cbPorez.FormattingEnabled = true;
-            this.cbPorez.Location = new System.Drawing.Point(91, 211);
-            this.cbPorez.Name = "cbPorez";
-            this.cbPorez.Size = new System.Drawing.Size(124, 21);
-            this.cbPorez.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(6, 214);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 18);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Porez";
-            // 
             // AzurirajArtikLForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +218,7 @@
             this.Controls.Add(this.btnPovratak);
             this.Controls.Add(this.groupBox1);
             this.Name = "AzurirajArtikLForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AzurirajArtikLForm";
             this.Load += new System.EventHandler(this.AzurirajArtikLForm_Load);
             this.groupBox1.ResumeLayout(false);

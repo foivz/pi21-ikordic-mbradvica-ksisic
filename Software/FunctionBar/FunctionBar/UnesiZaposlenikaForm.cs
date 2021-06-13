@@ -25,29 +25,37 @@ namespace FunctionBar
         {
             using (var context = new FunctionBarDB())
             {
-                long OIB = long.Parse(txtOIB.Text);
-                string ime = txtIme.Text;
-                string prezime = txtPrezime.Text;
-                string adresa = txtAdresa.Text;
-                string sprema = txtSprema.Text;
-                string korime = txtKorime.Text;
-                string lozinka = txtLozinka.Text;
-                vrsta_uloge vrsta = cbUloga.SelectedItem as vrsta_uloge;
-                context.vrsta_uloge.Attach(vrsta);
-                zaposlenik zaposlenik = new zaposlenik
+                try
                 {
-                    OIB = OIB,
-                    ime = ime,
-                    prezime = prezime,
-                    datum_rodenja = dtDatum.Value,
-                    adresa = adresa,
-                    korisnicko_ime = korime,
-                    lozinka = lozinka,
-                    vrsta_uloge = vrsta,
-                    strucna_sprema = sprema
-                };
-                context.zaposleniks.Add(zaposlenik);
-                context.SaveChanges();
+                    long OIB = long.Parse(txtOIB.Text);
+                    string ime = txtIme.Text;
+                    string prezime = txtPrezime.Text;
+                    string adresa = txtAdresa.Text;
+                    string sprema = txtSprema.Text;
+                    string korime = txtKorime.Text;
+                    string lozinka = txtLozinka.Text;
+                    vrsta_uloge vrsta = cbUloga.SelectedItem as vrsta_uloge;
+                    context.vrsta_uloge.Attach(vrsta);
+                    zaposlenik zaposlenik = new zaposlenik
+                    {
+                        OIB = OIB,
+                        ime = ime,
+                        prezime = prezime,
+                        datum_rodenja = dtDatum.Value,
+                        adresa = adresa,
+                        korisnicko_ime = korime,
+                        lozinka = lozinka,
+                        vrsta_uloge = vrsta,
+                        strucna_sprema = sprema
+                    };
+                    context.zaposleniks.Add(zaposlenik);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Molimo unesite ispravne vrijednosti!");
+                }
+
             }
             this.Close();
         }

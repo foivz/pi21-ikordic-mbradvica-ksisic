@@ -55,27 +55,35 @@ namespace FunctionBar.Forme
         {
             using (var context = new FunctionBarDB())
             {
-                string naziv = txtNaziv.Text;
-                int cijena = int.Parse(txtCijena.Text);
-                float normativ = float.Parse(txtNormativ.Text);
-                float kolicina = float.Parse(txtKoličina.Text);
-                float nabavna = float.Parse(txtNabavnaCijena.Text);
-                vrsta_artikla vrsta = cbVrstaArtikla.SelectedItem as vrsta_artikla;
-                context.vrsta_artikla.Attach(vrsta);
-                stopa_poreza stope = cbStopaPoreza.SelectedItem as stopa_poreza;
-                context.stopa_poreza.Attach(stope);
-                artikl artikl = new artikl
+                try
                 {
-                    naziv = naziv,
-                    cijena = cijena,
-                    normativ = normativ,
-                    kolicina_na_zalihi = kolicina,
-                    nabavna_cijena = nabavna,
-                    stopa_poreza = stope,
-                    vrsta_artikla = vrsta
-                };
-                context.artikls.Add(artikl);
-                context.SaveChanges();
+                    string naziv = txtNaziv.Text;
+                    int cijena = int.Parse(txtCijena.Text);
+                    float normativ = float.Parse(txtNormativ.Text);
+                    float kolicina = float.Parse(txtKoličina.Text);
+                    float nabavna = float.Parse(txtNabavnaCijena.Text);
+                    vrsta_artikla vrsta = cbVrstaArtikla.SelectedItem as vrsta_artikla;
+                    context.vrsta_artikla.Attach(vrsta);
+                    stopa_poreza stope = cbStopaPoreza.SelectedItem as stopa_poreza;
+                    context.stopa_poreza.Attach(stope);
+                    artikl artikl = new artikl
+                    {
+                        naziv = naziv,
+                        cijena = cijena,
+                        normativ = normativ,
+                        kolicina_na_zalihi = kolicina,
+                        nabavna_cijena = nabavna,
+                        stopa_poreza = stope,
+                        vrsta_artikla = vrsta
+                    };
+                    context.artikls.Add(artikl);
+                    context.SaveChanges();
+                }
+                catch
+                    {
+                    MessageBox.Show("Molimo unesite ispravne vrijednosti!");
+                }
+      
             }
             this.Close();
         }
