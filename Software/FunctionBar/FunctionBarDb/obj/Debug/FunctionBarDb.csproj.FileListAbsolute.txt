@@ -26,3 +26,17 @@ B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug
 B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.CopyComplete
 B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.dll
 B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.pdb
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\FunctionBarDb.dll.config
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\FunctionBarDb.dll
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\FunctionBarDb.pdb
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.dll
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.xml
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.AssemblyReference.cache
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.Properties.Resources.resources
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.GenerateResource.cache
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.CoreCompileInputs.cache
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.csproj.CopyComplete
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.dll
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBarDb\obj\Debug\FunctionBarDb.pdb
