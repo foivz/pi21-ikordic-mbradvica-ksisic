@@ -176,5 +176,25 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FBarDB.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FBarDB.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="artikli_inventure">
+      <EntityTypeMapping TypeName="FBarDB.artikli_inventure">
+        <MappingFragment StoreEntitySet="artikli_inventure">
+          <ScalarProperty Name="ID_inventure" ColumnName="ID_inventure" />
+          <ScalarProperty Name="ID_artikla" ColumnName="ID_artikla" />
+          <ScalarProperty Name="visak_manjak" ColumnName="visak_manjak" />
+          <ScalarProperty Name="kolicina_na_zalihi" ColumnName="kolicina_na_zalihi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventuras">
+      <EntityTypeMapping TypeName="FBarDB.inventura">
+        <MappingFragment StoreEntitySet="inventura">
+          <ScalarProperty Name="OIB" ColumnName="OIB" />
+          <ScalarProperty Name="datum_inventure" ColumnName="datum_inventure" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -17,6 +17,7 @@
     <NavigationProperty Name="stavka_narudzbe" Relationship="Self.FK_stavka_narudzbe_artikl" FromRole="artikl" ToRole="stavka_narudzbe" />
     <NavigationProperty Name="stavka_racuna" Relationship="Self.FK_stavka_racuna_artikl" FromRole="artikl" ToRole="stavka_racuna" />
     <Property Name="aktivan" Type="Boolean" />
+    <NavigationProperty Name="artikli_inventure" Relationship="FBarDB.inventura_artikli" FromRole="artikl" ToRole="artikli_inventure" />
   </EntityType>
   <EntityType Name="dobavljac">
     <Key>
@@ -164,6 +165,7 @@
     <NavigationProperty Name="rezervacijas" Relationship="Self.FK_rezervacija_zaposlenik" FromRole="zaposlenik" ToRole="rezervacija" />
     <NavigationProperty Name="vrsta_uloge" Relationship="Self.FK_zaposlenik_vrsta_uloge" FromRole="zaposlenik" ToRole="vrsta_uloge" />
     <Property Name="putanja" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="inventuras" Relationship="FBarDB.oib" FromRole="zaposlenik" ToRole="inventura" />
   </EntityType>
   <Association Name="FK_artikl_stopa_poreza">
     <End Role="stopa_poreza" Type="Self.stopa_poreza" Multiplicity="1" />
@@ -422,6 +424,20 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="artikli_inventure" EntityType="FBarDB.artikli_inventure" />
+    <EntitySet Name="inventuras" EntityType="FBarDB.inventura" />
+    <AssociationSet Name="inventura_artikli" Association="FBarDB.inventura_artikli">
+      <End Role="artikl" EntitySet="artikls" />
+      <End Role="artikli_inventure" EntitySet="artikli_inventure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_artikli_inventure_inventura" Association="FBarDB.FK_artikli_inventure_inventura">
+      <End Role="inventura" EntitySet="inventuras" />
+      <End Role="artikli_inventure" EntitySet="artikli_inventure" />
+    </AssociationSet>
+    <AssociationSet Name="oib" Association="FBarDB.oib">
+      <End Role="zaposlenik" EntitySet="zaposleniks" />
+      <End Role="inventura" EntitySet="inventuras" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -434,4 +450,62 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="artikli_inventure">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="kolicina_na_zalihi" Type="Double" Nullable="false" />
+    <Property Name="visak_manjak" Type="Double" Nullable="false" />
+    <Property Name="ID_artikla" Type="Int32" Nullable="false" />
+    <Property Name="ID_inventure" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="artikl" Relationship="FBarDB.inventura_artikli" FromRole="artikli_inventure" ToRole="artikl" />
+    <NavigationProperty Name="inventura" Relationship="FBarDB.FK_artikli_inventure_inventura" FromRole="artikli_inventure" ToRole="inventura" />
+  </EntityType>
+  <EntityType Name="inventura">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="datum_inventure" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="OIB" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="artikli_inventure" Relationship="FBarDB.FK_artikli_inventure_inventura" FromRole="inventura" ToRole="artikli_inventure" />
+    <NavigationProperty Name="zaposlenik" Relationship="FBarDB.oib" FromRole="inventura" ToRole="zaposlenik" />
+  </EntityType>
+  <Association Name="inventura_artikli">
+    <End Type="FBarDB.artikl" Role="artikl" Multiplicity="1" />
+    <End Type="FBarDB.artikli_inventure" Role="artikli_inventure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artikl">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artikli_inventure">
+        <PropertyRef Name="ID_artikla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_artikli_inventure_inventura">
+    <End Type="FBarDB.inventura" Role="inventura" Multiplicity="1" />
+    <End Type="FBarDB.artikli_inventure" Role="artikli_inventure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventura">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artikli_inventure">
+        <PropertyRef Name="ID_inventure" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="oib">
+    <End Type="FBarDB.zaposlenik" Role="zaposlenik" Multiplicity="1" />
+    <End Type="FBarDB.inventura" Role="inventura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenik">
+        <PropertyRef Name="OIB" />
+      </Principal>
+      <Dependent Role="inventura">
+        <PropertyRef Name="OIB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

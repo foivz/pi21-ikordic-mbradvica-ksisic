@@ -99,8 +99,6 @@ B:\pi\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\F
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBar.exe.config
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBar.exe
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBar.pdb
-C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\EntityFramework.dll
-C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBarDb.dll
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBarDb.pdb
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\FunctionBarDb.dll.config
@@ -131,3 +129,6 @@ C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\Funct
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.csproj.CopyComplete
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.exe
 C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.pdb
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\obj\Debug\FunctionBar.Forme.PregledInventura.resources
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\EntityFramework.dll
+C:\Users\Klara\Desktop\PI_vjezbanje\pi21-ikordic-mbradvica-ksisic\Software\FunctionBar\FunctionBar\bin\Debug\EntityFramework.SqlServer.dll

@@ -14,6 +14,16 @@
     <Property Name="id_stopa_poreza" Type="int" Nullable="false" />
     <Property Name="aktivan" Type="bit" />
   </EntityType>
+  <EntityType Name="artikli_inventure">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="kolicina_na_zalihi" Type="float" Nullable="false" />
+    <Property Name="visak_manjak" Type="float" Nullable="false" />
+    <Property Name="ID_artikla" Type="int" Nullable="false" />
+    <Property Name="ID_inventure" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="dobavljac">
     <Key>
       <PropertyRef Name="OIB" />
@@ -23,6 +33,14 @@
     <Property Name="telefon" Type="text" />
     <Property Name="adresa" Type="text" />
     <Property Name="IBAN" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="inventura">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="datum_inventure" Type="date" Nullable="false" />
+    <Property Name="OIB" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="narudzbenica">
     <Key>
@@ -165,6 +183,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_artikli_inventure_inventura">
+    <End Role="inventura" Type="Self.inventura" Multiplicity="1" />
+    <End Role="artikli_inventure" Type="Self.artikli_inventure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventura">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artikli_inventure">
+        <PropertyRef Name="ID_inventure" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_narudzbenica_dobavljac">
     <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="1" />
     <End Role="narudzbenica" Type="Self.narudzbenica" Multiplicity="*" />
@@ -301,6 +331,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="inventura_artikli">
+    <End Role="artikl" Type="Self.artikl" Multiplicity="1" />
+    <End Role="artikli_inventure" Type="Self.artikli_inventure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artikl">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artikli_inventure">
+        <PropertyRef Name="ID_artikla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="oib">
+    <End Role="zaposlenik" Type="Self.zaposlenik" Multiplicity="1" />
+    <End Role="inventura" Type="Self.inventura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenik">
+        <PropertyRef Name="OIB" />
+      </Principal>
+      <Dependent Role="inventura">
+        <PropertyRef Name="OIB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -334,7 +388,9 @@
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="FBarDBStoreContainer">
     <EntitySet Name="artikl" EntityType="Self.artikl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="artikli_inventure" EntityType="Self.artikli_inventure" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dobavljac" EntityType="Self.dobavljac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inventura" EntityType="Self.inventura" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="narudzbenica" EntityType="Self.narudzbenica" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="racun" EntityType="Self.racun" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="rezervacija" EntityType="Self.rezervacija" Schema="dbo" store:Type="Tables" />
@@ -354,6 +410,10 @@
     <AssociationSet Name="FK_artikl_vrsta_artikla" Association="Self.FK_artikl_vrsta_artikla">
       <End Role="vrsta_artikla" EntitySet="vrsta_artikla" />
       <End Role="artikl" EntitySet="artikl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_artikli_inventure_inventura" Association="Self.FK_artikli_inventure_inventura">
+      <End Role="inventura" EntitySet="inventura" />
+      <End Role="artikli_inventure" EntitySet="artikli_inventure" />
     </AssociationSet>
     <AssociationSet Name="FK_narudzbenica_dobavljac" Association="Self.FK_narudzbenica_dobavljac">
       <End Role="dobavljac" EntitySet="dobavljac" />
@@ -398,6 +458,14 @@
     <AssociationSet Name="FK_zaposlenik_vrsta_uloge" Association="Self.FK_zaposlenik_vrsta_uloge">
       <End Role="vrsta_uloge" EntitySet="vrsta_uloge" />
       <End Role="zaposlenik" EntitySet="zaposlenik" />
+    </AssociationSet>
+    <AssociationSet Name="inventura_artikli" Association="Self.inventura_artikli">
+      <End Role="artikl" EntitySet="artikl" />
+      <End Role="artikli_inventure" EntitySet="artikli_inventure" />
+    </AssociationSet>
+    <AssociationSet Name="oib" Association="Self.oib">
+      <End Role="zaposlenik" EntitySet="zaposlenik" />
+      <End Role="inventura" EntitySet="inventura" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
