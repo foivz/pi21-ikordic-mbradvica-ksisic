@@ -69,6 +69,7 @@ namespace FunctionBar.Forme
                                    Broj_narudzbenice = narudzbenica.ID,
                                    DatumNarudžbe = narudzbenica.datum_narudzbe,
                                    Dobavljac = dobavljac.naziv,
+                                   DatumZaprimanja = narudzbenica.datum_zaprimanja,
                                    Obavio_narudžbu = zaposlenik.ime + " " + zaposlenik.prezime
                                };
                     return upit.ToList();
@@ -106,31 +107,21 @@ namespace FunctionBar.Forme
             switch (cbFilterNarudzbenice.SelectedIndex)
             {
                 case 0:
-                    button1.Visible = true;
-                    button2.Visible = true;
+                    btnZaprimi.Visible = true;
                     dgvNarudzbenice.DataSource = null;
+                    lblStavke.Text = "Stavke";
                     Osvjezi(0);
                     break;
                 case 1:
-                    button1.Visible = false;
-                    button2.Visible = false;
+                    btnZaprimi.Visible = false;
                     dgvNarudzbenice.DataSource = null;
+                    lblStavke.Text = "Primljene stavke";
                     Osvjezi(1);
                     break;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (dgvNarudzbenice.Rows.Count != 0)
-            {
-                var id = dgvNarudzbenice.CurrentRow.Cells[0].Value;
-                Zaprimi(id);
-                Osvjezi(0);
-                MessageBox.Show("Roba uspješno zaprimljena!");
-                    
-            }
-        }
+
 
         //dohvacaju se stavke i artikli u narudzbenici te se svakom zaprimljenom artiklu poveća odgovarajuća količina i ažurira se količina na zalihi
         //datum zaprimanja narudzbenice automatski se postavlja na trenutno vrijeme
@@ -172,27 +163,15 @@ namespace FunctionBar.Forme
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnZaprimi_Click(object sender, EventArgs e)
         {
             if (dgvNarudzbenice.Rows.Count != 0)
             {
                 var id = dgvNarudzbenice.CurrentRow.Cells[0].Value;
-                Obrisi(id);
+                Zaprimi(id);
                 Osvjezi(0);
-            }
-        }
+                MessageBox.Show("Roba uspješno zaprimljena!");
 
-        //s obzirom koja narudžbenica je odabrana, ista se briše
-        private void Obrisi(object id)
-        {
-            using (var context = new FunctionBarDB())
-            {
-                var upit = from n in context.narudzbenicas
-                           where n.ID == (int)id
-                           select n;
-                var obj = upit.SingleOrDefault();
-                context.narudzbenicas.Remove(obj);
-                context.SaveChanges();
             }
         }
 

@@ -27,6 +27,7 @@ namespace FunctionBar
             {
                 uxStatistika.Visible = false;
                 uxInventura.Visible = false;
+                uxPregledInventura.Visible = false;
                 uxNarucivanje.Visible = false;
                 uxZaposlenici.Visible = false;
             }
@@ -155,10 +156,25 @@ namespace FunctionBar
             aktivnaForma.Show();
         }
 
+
+
         private void uxAktivnaForma_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             string helpPoveznica = "FunctionBarHelp.chm";
             Help.ShowHelp(this, Environment.CurrentDirectory + "\\Resources\\" + helpPoveznica, HelpNavigator.Topic, "start.htm#_Toc43663402");
+        }
+
+        private void uxPregledInventura_Click(object sender, EventArgs e)
+        {
+            uxAktivnaForma.Controls.Clear();
+            PregledInventura aktivnaForma = new PregledInventura();
+            aktivnaForma.TopLevel = false;
+            aktivnaForma.AutoScroll = true;
+            aktivnaForma.FormBorderStyle = FormBorderStyle.None;
+            aktivnaForma.WindowState = FormWindowState.Maximized;
+            aktivnaForma.Dock = DockStyle.Fill;
+            uxAktivnaForma.Controls.Add(aktivnaForma);
+            aktivnaForma.Show();
         }
     }
 }

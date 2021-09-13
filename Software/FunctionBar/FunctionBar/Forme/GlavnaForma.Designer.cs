@@ -30,6 +30,7 @@
         {
             this.uxAktivnaForma = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.uxPregledInventura = new System.Windows.Forms.Button();
             this.uxStatistika = new System.Windows.Forms.Button();
             this.uxArtikl = new System.Windows.Forms.Button();
             this.uxInventura = new System.Windows.Forms.Button();
@@ -47,9 +48,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uxAktivnaForma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uxAktivnaForma.Location = new System.Drawing.Point(-4, 138);
+            this.uxAktivnaForma.Location = new System.Drawing.Point(-5, 170);
+            this.uxAktivnaForma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxAktivnaForma.Name = "uxAktivnaForma";
-            this.uxAktivnaForma.Size = new System.Drawing.Size(1257, 483);
+            this.uxAktivnaForma.Size = new System.Drawing.Size(1738, 594);
             this.uxAktivnaForma.TabIndex = 2;
             this.uxAktivnaForma.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.uxAktivnaForma_HelpRequested);
             this.uxAktivnaForma.Paint += new System.Windows.Forms.PaintEventHandler(this.uxAktivnaForma_Paint);
@@ -58,38 +60,55 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Controls.Add(this.uxStatistika, 7, 0);
+            this.tableLayoutPanel1.ColumnCount = 9;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.2F));
+            this.tableLayoutPanel1.Controls.Add(this.uxPregledInventura, 8, 0);
+            this.tableLayoutPanel1.Controls.Add(this.uxStatistika, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.uxArtikl, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.uxInventura, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.uxInventura, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.uxZaposlenici, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.uxNarucivanje, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.uxZaprimanjeRobe, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.uxRacuni, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.uxRezervacije, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 15);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1221, 96);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1338, 118);
             this.tableLayoutPanel1.TabIndex = 15;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // uxPregledInventura
+            // 
+            this.uxPregledInventura.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uxPregledInventura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxPregledInventura.Location = new System.Drawing.Point(1188, 4);
+            this.uxPregledInventura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxPregledInventura.Name = "uxPregledInventura";
+            this.uxPregledInventura.Size = new System.Drawing.Size(146, 110);
+            this.uxPregledInventura.TabIndex = 10;
+            this.uxPregledInventura.Text = "Pregled inventura";
+            this.uxPregledInventura.UseVisualStyleBackColor = true;
+            this.uxPregledInventura.Click += new System.EventHandler(this.uxPregledInventura_Click);
             // 
             // uxStatistika
             // 
             this.uxStatistika.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxStatistika.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxStatistika.Location = new System.Drawing.Point(1067, 3);
+            this.uxStatistika.Location = new System.Drawing.Point(892, 4);
+            this.uxStatistika.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxStatistika.Name = "uxStatistika";
-            this.uxStatistika.Size = new System.Drawing.Size(151, 90);
+            this.uxStatistika.Size = new System.Drawing.Size(140, 110);
             this.uxStatistika.TabIndex = 6;
             this.uxStatistika.Text = "Statistika";
             this.uxStatistika.UseVisualStyleBackColor = true;
@@ -99,9 +118,10 @@
             // 
             this.uxArtikl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxArtikl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxArtikl.Location = new System.Drawing.Point(3, 3);
+            this.uxArtikl.Location = new System.Drawing.Point(4, 4);
+            this.uxArtikl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxArtikl.Name = "uxArtikl";
-            this.uxArtikl.Size = new System.Drawing.Size(146, 90);
+            this.uxArtikl.Size = new System.Drawing.Size(140, 110);
             this.uxArtikl.TabIndex = 7;
             this.uxArtikl.Text = "Artikli";
             this.uxArtikl.UseVisualStyleBackColor = true;
@@ -111,9 +131,10 @@
             // 
             this.uxInventura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxInventura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxInventura.Location = new System.Drawing.Point(915, 3);
+            this.uxInventura.Location = new System.Drawing.Point(1040, 4);
+            this.uxInventura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxInventura.Name = "uxInventura";
-            this.uxInventura.Size = new System.Drawing.Size(146, 90);
+            this.uxInventura.Size = new System.Drawing.Size(140, 110);
             this.uxInventura.TabIndex = 2;
             this.uxInventura.Text = "Inventura";
             this.uxInventura.UseVisualStyleBackColor = true;
@@ -123,9 +144,10 @@
             // 
             this.uxZaposlenici.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxZaposlenici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxZaposlenici.Location = new System.Drawing.Point(155, 3);
+            this.uxZaposlenici.Location = new System.Drawing.Point(152, 4);
+            this.uxZaposlenici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxZaposlenici.Name = "uxZaposlenici";
-            this.uxZaposlenici.Size = new System.Drawing.Size(146, 90);
+            this.uxZaposlenici.Size = new System.Drawing.Size(140, 110);
             this.uxZaposlenici.TabIndex = 3;
             this.uxZaposlenici.Text = "Zaposlenici";
             this.uxZaposlenici.UseVisualStyleBackColor = true;
@@ -135,9 +157,10 @@
             // 
             this.uxNarucivanje.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxNarucivanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxNarucivanje.Location = new System.Drawing.Point(763, 3);
+            this.uxNarucivanje.Location = new System.Drawing.Point(744, 4);
+            this.uxNarucivanje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxNarucivanje.Name = "uxNarucivanje";
-            this.uxNarucivanje.Size = new System.Drawing.Size(146, 90);
+            this.uxNarucivanje.Size = new System.Drawing.Size(140, 110);
             this.uxNarucivanje.TabIndex = 5;
             this.uxNarucivanje.Text = "Naručivanje robe";
             this.uxNarucivanje.UseVisualStyleBackColor = true;
@@ -147,9 +170,10 @@
             // 
             this.uxZaprimanjeRobe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxZaprimanjeRobe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxZaprimanjeRobe.Location = new System.Drawing.Point(611, 3);
+            this.uxZaprimanjeRobe.Location = new System.Drawing.Point(596, 4);
+            this.uxZaprimanjeRobe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxZaprimanjeRobe.Name = "uxZaprimanjeRobe";
-            this.uxZaprimanjeRobe.Size = new System.Drawing.Size(146, 90);
+            this.uxZaprimanjeRobe.Size = new System.Drawing.Size(140, 110);
             this.uxZaprimanjeRobe.TabIndex = 9;
             this.uxZaprimanjeRobe.Text = "Narudžbenice";
             this.uxZaprimanjeRobe.UseVisualStyleBackColor = true;
@@ -159,9 +183,10 @@
             // 
             this.uxRacuni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxRacuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxRacuni.Location = new System.Drawing.Point(459, 3);
+            this.uxRacuni.Location = new System.Drawing.Point(448, 4);
+            this.uxRacuni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxRacuni.Name = "uxRacuni";
-            this.uxRacuni.Size = new System.Drawing.Size(146, 90);
+            this.uxRacuni.Size = new System.Drawing.Size(140, 110);
             this.uxRacuni.TabIndex = 8;
             this.uxRacuni.Text = "Računi";
             this.uxRacuni.UseVisualStyleBackColor = true;
@@ -171,9 +196,10 @@
             // 
             this.uxRezervacije.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxRezervacije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxRezervacije.Location = new System.Drawing.Point(307, 3);
+            this.uxRezervacije.Location = new System.Drawing.Point(300, 4);
+            this.uxRezervacije.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uxRezervacije.Name = "uxRezervacije";
-            this.uxRezervacije.Size = new System.Drawing.Size(146, 90);
+            this.uxRezervacije.Size = new System.Drawing.Size(140, 110);
             this.uxRezervacije.TabIndex = 4;
             this.uxRezervacije.Text = "Rezervacije";
             this.uxRezervacije.UseVisualStyleBackColor = true;
@@ -181,12 +207,13 @@
             // 
             // GlavnaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1245, 609);
+            this.ClientSize = new System.Drawing.Size(1723, 750);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.uxAktivnaForma);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GlavnaForma";
             this.Text = "Glavna Forma";
             this.Load += new System.EventHandler(this.GlavnaForma_Load);
@@ -207,6 +234,7 @@
         private System.Windows.Forms.Button uxZaprimanjeRobe;
         private System.Windows.Forms.Button uxRacuni;
         private System.Windows.Forms.Button uxRezervacije;
+        private System.Windows.Forms.Button uxPregledInventura;
     }
 }
 

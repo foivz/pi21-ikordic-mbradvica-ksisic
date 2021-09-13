@@ -45,15 +45,7 @@ namespace FunctionBar.Forme
                 return context.vrsta_artikla.ToList();
             }
         }
-        private object UzmiArtikle(vrsta_artikla vrstaArtikla)
-        {
-            using (var context = new FunctionBarDB())
-            {
-                context.vrsta_artikla.Attach(vrstaArtikla);
-               
-                return vrstaArtikla.artikls.ToList();
-            }
-        }
+
 
         private void dgvVrstaArtikla_SelectionChanged(object sender, EventArgs e)
         {
@@ -117,7 +109,7 @@ namespace FunctionBar.Forme
         //povećava se količina artikla za kucanje
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            labelKolicina.Text = (int.Parse(labelKolicina.Text) + 1).ToString();
+            lblKolicina.Text = (int.Parse(lblKolicina.Text) + 1).ToString();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -129,15 +121,15 @@ namespace FunctionBar.Forme
         private void btnMinus_Click(object sender, EventArgs e)
         {
             ProvjeriMinus();
-            labelKolicina.Text = (int.Parse(labelKolicina.Text) -1).ToString();
+            lblKolicina.Text = (int.Parse(lblKolicina.Text) -1).ToString();
         }
 
         //ukoliko je vrijednost za kucanje manja od 0, vraća se na 1
         private void ProvjeriMinus()
         {
-            if (int.Parse(labelKolicina.Text) <= 0)
+            if (int.Parse(lblKolicina.Text) <= 0)
             {
-                labelKolicina.Text = "1";
+                lblKolicina.Text = "1";
             }
         }
 
@@ -173,7 +165,7 @@ namespace FunctionBar.Forme
 
         private void PostaviLabeluNaJedan()
         {
-            labelKolicina.Text = "1";
+            lblKolicina.Text = "1";
         }
 
         //postavljaju se stupci u dgvZaKucanje potrebni za izradu računa
@@ -198,9 +190,9 @@ namespace FunctionBar.Forme
         {
             int red = 0;
             red = dgvZaKucanje.Rows.Count - 2;
-            if (Convert.ToInt32(labelKolicina.Text) > 0)
+            if (Convert.ToInt32(lblKolicina.Text) > 0)
             {
-                dgvZaKucanje["Količina", red].Value = labelKolicina.Text;
+                dgvZaKucanje["Količina", red].Value = lblKolicina.Text;
             }
             else
             {
@@ -221,7 +213,7 @@ namespace FunctionBar.Forme
                     UkupnaSuma();
                 } 
             }
-            catch(Exception ex)
+            catch
             {
                 MessageBox.Show("Došlo je do pogreške!");
             }
@@ -275,7 +267,7 @@ namespace FunctionBar.Forme
                         MessageBox.Show("Uspješno kreiran račun!");
                     
                 }
-                catch(Exception ex)
+                catch
                 {
                     MessageBox.Show("Molimo izbrišite duplikat artikala");
                 }

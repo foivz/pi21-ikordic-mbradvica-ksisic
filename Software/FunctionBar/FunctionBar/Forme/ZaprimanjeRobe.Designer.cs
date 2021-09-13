@@ -28,38 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnZaprimi = new System.Windows.Forms.Button();
             this.dgvNarudzbenice = new System.Windows.Forms.DataGridView();
             this.dgvStavke = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblStavke = new System.Windows.Forms.Label();
             this.cbFilterNarudzbenice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbenice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnZaprimi
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(485, 579);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 52);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Obriši";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(65, 579);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 52);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Zaprimi";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnZaprimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZaprimi.Location = new System.Drawing.Point(65, 579);
+            this.btnZaprimi.Name = "btnZaprimi";
+            this.btnZaprimi.Size = new System.Drawing.Size(116, 52);
+            this.btnZaprimi.TabIndex = 3;
+            this.btnZaprimi.Text = "Zaprimi";
+            this.btnZaprimi.UseVisualStyleBackColor = true;
+            this.btnZaprimi.Click += new System.EventHandler(this.btnZaprimi_Click);
             // 
             // dgvNarudzbenice
             // 
@@ -88,15 +76,15 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Narudžbenica";
             // 
-            // label2
+            // lblStavke
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(727, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Stavke ";
+            this.lblStavke.AutoSize = true;
+            this.lblStavke.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStavke.Location = new System.Drawing.Point(727, 35);
+            this.lblStavke.Name = "lblStavke";
+            this.lblStavke.Size = new System.Drawing.Size(84, 25);
+            this.lblStavke.TabIndex = 7;
+            this.lblStavke.Text = "Stavke ";
             // 
             // cbFilterNarudzbenice
             // 
@@ -114,12 +102,11 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1397, 664);
             this.Controls.Add(this.cbFilterNarudzbenice);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblStavke);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvStavke);
             this.Controls.Add(this.dgvNarudzbenice);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnZaprimi);
             this.Name = "ZaprimanjeRobe";
             this.Text = "NarudzbeniceForm";
             this.Load += new System.EventHandler(this.ZaprimanjeRobe_Load);
@@ -132,12 +119,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnZaprimi;
         private System.Windows.Forms.DataGridView dgvNarudzbenice;
         private System.Windows.Forms.DataGridView dgvStavke;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblStavke;
         private System.Windows.Forms.ComboBox cbFilterNarudzbenice;
     }
 }

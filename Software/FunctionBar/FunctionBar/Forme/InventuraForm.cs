@@ -18,13 +18,26 @@ namespace FunctionBar.Forme
         {
             InitializeComponent();
             artikli = SviArtikli();
+
+            /*List<zaposlenik> zaposlenici = new List<zaposlenik>();
+            List<String> oibImeZaposlenika = new List<string>();
+            using (var context = new FunctionBarDB())
+            {
+                
+                zaposlenici = context.zaposleniks.ToList();
+                foreach (var zap in zaposlenici) {
+                    oibImeZaposlenika.Add(zap.ime + " " + zap.prezime + ", " + zap.OIB.ToString());
+                }
+
+            }
+            cbZaposlenik.DataSource = oibImeZaposlenika;*/
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Osvjezi();
         }
-        public  List<artikl> SviArtikli()
+        public List<artikl> SviArtikli()
         {
             using (var context=new FunctionBarDB())
             {
@@ -77,10 +90,37 @@ namespace FunctionBar.Forme
             if (dialog == DialogResult.Yes)
             {
                 int brojac = 0;
+                int idInventure = 0;
                 foreach (Inventura item in uxArtikli.Controls)
                 {
                     brojac++;
-                    item.AzurirajArtikl();
+                    if (brojac == 1) {
+                        using (var context = new FunctionBarDB())
+                        {
+
+                            try
+                            {
+                                //String[] imeOib = cbZaposlenik.SelectedItem.ToString().Split(' ');
+                                inventura inventura = new inventura
+                                {
+                                    ID = context.inventuras.Count(),
+                                    datum_inventure = DateTime.Now,
+                                    OIB = UpravljanjeRačunima.VratiTrenutniOIB()
+                                    //OIB = long.Parse(imeOib[imeOib.Length - 1])
+
+                                };
+                                idInventure = inventura.ID;
+                                context.inventuras.Add(inventura);
+                                context.SaveChanges();
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Nije se azuriralo");
+                            }
+                        }
+                        }
+                    item.AzurirajArtikl(idInventure);
+                    
                 }
 
                 if (brojac > 0)

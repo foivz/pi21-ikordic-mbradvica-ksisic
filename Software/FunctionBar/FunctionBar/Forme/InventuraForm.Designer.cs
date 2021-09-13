@@ -32,6 +32,8 @@
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnIzbrisi = new System.Windows.Forms.Button();
             this.btnAzuriraj = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbZaposlenik = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // uxArtikli
@@ -84,12 +86,35 @@
             this.btnAzuriraj.UseVisualStyleBackColor = true;
             this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 457);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Inventuru provodi:";
+            this.label1.Visible = false;
+            // 
+            // cbZaposlenik
+            // 
+            this.cbZaposlenik.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbZaposlenik.FormattingEnabled = true;
+            this.cbZaposlenik.Location = new System.Drawing.Point(23, 485);
+            this.cbZaposlenik.Name = "cbZaposlenik";
+            this.cbZaposlenik.Size = new System.Drawing.Size(373, 33);
+            this.cbZaposlenik.TabIndex = 12;
+            this.cbZaposlenik.Visible = false;
+            // 
             // InventuraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(942, 633);
+            this.Controls.Add(this.cbZaposlenik);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.btnIzbrisi);
             this.Controls.Add(this.btnDodaj);
@@ -98,6 +123,7 @@
             this.Text = "InventuraForm";
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.InventuraForm_HelpRequested);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -107,5 +133,7 @@
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnIzbrisi;
         private System.Windows.Forms.Button btnAzuriraj;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbZaposlenik;
     }
 }

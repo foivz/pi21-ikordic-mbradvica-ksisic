@@ -57,7 +57,7 @@
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
-            this.labelKolicina = new System.Windows.Forms.Label();
+            this.lblKolicina = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvZaKucanje = new System.Windows.Forms.DataGridView();
             this.btnIspisiRacun = new System.Windows.Forms.Button();
@@ -248,7 +248,7 @@
             this.gbDodaj.Controls.Add(this.btnDodaj);
             this.gbDodaj.Controls.Add(this.btnMinus);
             this.gbDodaj.Controls.Add(this.btnPlus);
-            this.gbDodaj.Controls.Add(this.labelKolicina);
+            this.gbDodaj.Controls.Add(this.lblKolicina);
             this.gbDodaj.Controls.Add(this.label4);
             this.gbDodaj.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.gbDodaj.Location = new System.Drawing.Point(1033, 12);
@@ -294,16 +294,16 @@
             this.btnPlus.UseVisualStyleBackColor = true;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
-            // labelKolicina
+            // lblKolicina
             // 
-            this.labelKolicina.AutoSize = true;
-            this.labelKolicina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelKolicina.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.labelKolicina.Location = new System.Drawing.Point(116, 43);
-            this.labelKolicina.Name = "labelKolicina";
-            this.labelKolicina.Size = new System.Drawing.Size(18, 20);
-            this.labelKolicina.TabIndex = 15;
-            this.labelKolicina.Text = "1";
+            this.lblKolicina.AutoSize = true;
+            this.lblKolicina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKolicina.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblKolicina.Location = new System.Drawing.Point(116, 43);
+            this.lblKolicina.Name = "lblKolicina";
+            this.lblKolicina.Size = new System.Drawing.Size(18, 20);
+            this.lblKolicina.TabIndex = 15;
+            this.lblKolicina.Text = "1";
             // 
             // label4
             // 
@@ -452,7 +452,7 @@
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnPlus;
-        private System.Windows.Forms.Label labelKolicina;
+        private System.Windows.Forms.Label lblKolicina;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvZaKucanje;
         private System.Windows.Forms.Button btnIspisiRacun;

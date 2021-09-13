@@ -31,6 +31,8 @@ namespace FunctionBar.UC
             uxRazlika.ReadOnly = true;
             uxStanjeNaSkladistu.ReadOnly = true;
 
+          
+
         }
 
 
@@ -45,7 +47,7 @@ namespace FunctionBar.UC
 
         //metoda koja služi za provjeru upisanog stanja na skladištu
         //ukoliko je stanje upisano, vraća se razlika stanja u sustavu i stvarnog stanja nakon provođenja inventure
-        public  double Razlika(string kolicinaUSustavu, string stanjeNaSkladistu)
+        public double Razlika(string kolicinaUSustavu, string stanjeNaSkladistu)
         {
             stanjeNaSkladistu = stanjeNaSkladistu.Replace(".", ",");
             double razlika;
@@ -61,7 +63,7 @@ namespace FunctionBar.UC
 
 
         //kolicina artikla na temelju odabranog artikla
-        private double? kolicinaArtikla(string naziv)
+        private double? KolicinaArtikla(string naziv)
         {
             double? kolicina=_artikli.First(x=>x.naziv==naziv).kolicina_na_zalihi;
             return kolicina;
@@ -110,7 +112,7 @@ namespace FunctionBar.UC
         {
             uxStanjeNaSkladistu.Text = "";
             uxRazlika.Text = "0";
-            double? kolicina = kolicinaArtikla(uxNaziv.Text);
+            double? kolicina = KolicinaArtikla(uxNaziv.Text);
             uxKolicinaUSustavu.Text = kolicina.ToString();
             uxStanjeNaSkladistu.ReadOnly = false;
             uxStanjeNaSkladistu.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -138,10 +140,22 @@ namespace FunctionBar.UC
             }
         }
 
-        public  void AzurirajStanje(artikl artikl, double stanje)
+        public void AzurirajStanje(artikl artikl, double stanje, int idInventure)
         {
             using (var context = new FunctionBarDB())
             {
+
+                    artikli_inventure artikli_Inventure = new artikli_inventure {
+                        ID = context.artikli_inventure.Count(),
+                        ID_artikla = artikl.ID,
+                        ID_inventure = idInventure,
+                        kolicina_na_zalihi = (double)artikl.kolicina_na_zalihi,
+                        visak_manjak = stanje - (double)artikl.kolicina_na_zalihi
+
+                    };
+                    context.artikli_inventure.Add(artikli_Inventure);
+                    context.SaveChanges();
+
                 context.artikls.Attach(artikl);
                 artikl.kolicina_na_zalihi = stanje;
                 context.SaveChanges();
@@ -149,7 +163,7 @@ namespace FunctionBar.UC
         }
 
 
-        public void AzurirajArtikl()
+        public void AzurirajArtikl(int idInventure)
         {
             artikl artikl = null;
             artikl = _artikli.FirstOrDefault(r => r.naziv == uxNaziv.Text);
@@ -157,7 +171,7 @@ namespace FunctionBar.UC
             else
             {
                 double kolicina = double.Parse(uxStanjeNaSkladistu.Text.Replace(".", ","));
-                AzurirajStanje(artikl, kolicina);
+                AzurirajStanje(artikl, kolicina, idInventure);
             }
         }
 

@@ -22,7 +22,7 @@
     <Property Name="kolicina_na_zalihi" Type="float" Nullable="false" />
     <Property Name="visak_manjak" Type="float" Nullable="false" />
     <Property Name="ID_artikla" Type="int" Nullable="false" />
-    <Property Name="ID_inventure" Type="int" Nullable="false" />
+    <Property Name="ID_inventure" Type="int" />
   </EntityType>
   <EntityType Name="dobavljac">
     <Key>
@@ -184,7 +184,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_artikli_inventure_inventura">
-    <End Role="inventura" Type="Self.inventura" Multiplicity="1" />
+    <End Role="inventura" Type="Self.inventura" Multiplicity="0..1" />
     <End Role="artikli_inventure" Type="Self.artikli_inventure" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="inventura">

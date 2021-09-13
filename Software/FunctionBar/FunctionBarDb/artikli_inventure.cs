@@ -26,13 +26,15 @@ public partial class artikli_inventure
 
     public int ID_artikla { get; set; }
 
-    public int ID_inventure { get; set; }
+    public Nullable<int> ID_inventure { get; set; }
 
 
 
     public virtual artikl artikl { get; set; }
 
     public virtual inventura inventura { get; set; }
+
+    public virtual inventura inventura1 { get; set; }
 
 }
 

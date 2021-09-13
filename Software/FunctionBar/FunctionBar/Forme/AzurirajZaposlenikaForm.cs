@@ -86,7 +86,7 @@ namespace FunctionBar.Forme
                     odabranZaposlenik.id_vrsta_uloge = (cbUloga.SelectedItem as vrsta_uloge).ID;
                     context.SaveChanges();
                 }
-                catch(Exception ex)
+                catch
                 {
                     MessageBox.Show("Unesite ispravne vrijednosti");
                 }

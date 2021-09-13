@@ -69,11 +69,6 @@ namespace FunctionBar.Forme
             Osvjezi();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void ZaposleniciForm_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
             string helpPoveznica = "FunctionBarHelp.chm";
